@@ -8,6 +8,7 @@ notes: CSS style for Capytech home, portfolio, articles, about, contact
 
 @import url(normalize.css);
 @import url(portfolio-style.css);
+@import url(articles-style.css);
 
 @font-face {
     font-family: 'zero-hour';

@@ -1,0 +1,13 @@
+
+#articles-main img {
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+}
+
+@media(min-width:760px){
+    #articles-main img{
+        margin: auto;
+        border-radius: 15px;
+    }
+}
