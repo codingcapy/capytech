@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*
 author: capytech
-date: October 5, 2022
-version: 1.0
+date: October 20, 2022
+version: 1.2
 notes: CSS style for Capytech home, portfolio, articles, about, contact
 */
 
@@ -58,33 +58,8 @@ a {
     font-weight: bold;
 }
 
-p{
-    padding:10px;
-}
-
-#paul-neon {
-    border-radius: 20px;
-    -webkit-filter: drop-shadow(0 0 10px #000000);
-    filter: drop-shadow(0 0 10px #000000);
-    padding: 20px;
-    width: 100%;
-    max-width: 650px;
-    margin: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-#languages {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:75px;
+p {
     padding: 10px;
-}
-
-#languages img {
-    max-width: 75px;
 }
 
 footer {
@@ -93,9 +68,9 @@ footer {
 
 footer ul {
     width: 250px;
-    list-style:none;
-    margin:0;
-    padding:0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .show {
@@ -151,6 +126,30 @@ footer ul {
     min-height: 100vh;
     margin: auto;
     max-width: 1900px;
+}
+
+#paul-neon {
+    border-radius: 20px;
+    -webkit-filter: drop-shadow(0 0 10px #000000);
+    filter: drop-shadow(0 0 10px #000000);
+    padding: 20px;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 75px;
+    padding: 10px;
+}
+
+#languages img {
+    max-width: 75px;
 }
 
 @media (min-width:720px) {

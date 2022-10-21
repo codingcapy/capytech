@@ -1,10 +1,13 @@
+@charset "utf-8";
+/*
+author: capytech
+date: October 20, 2022
+version: 1.2
+notes: CSS style for Capytech portfolio
+*/
 
-#videos{
-
-}
-
-.video{
-    border:solid 2px lightseagreen;
+.video {
+    border: solid 2px lightseagreen;
     border-radius: 15px;
     width: 375px;
     margin: 0;
@@ -15,8 +18,16 @@
     margin: auto;
 }
 
-@media (min-width:720px){
-    .video{
+#portfolio-main h1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+@media (min-width:720px) {
+    .video {
         width: 100%;
+        max-width: 650px;
     }
 }
