@@ -107,6 +107,7 @@ footer ul {
     color: white;
     cursor: pointer;
     padding-right: 12px;
+    transition: all 0.3s ease;
 }
 
 .hamburger-menu:hover {
@@ -122,6 +123,7 @@ footer ul {
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
