@@ -9,8 +9,8 @@ notes: CSS style for Capytech portfolio
 .video {
     border: solid 2px lightseagreen;
     border-radius: 15px;
-    width: 365px;
-    margin: 0;
+    width: 325px;
+    margin: auto;
     padding: 0;
     display: flex;
     justify-content: center;
