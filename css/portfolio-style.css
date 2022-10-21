@@ -1,0 +1,16 @@
+
+#portfolio{
+    max-width: 1900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.video{
+    border:solid 2px lightseagreen;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
