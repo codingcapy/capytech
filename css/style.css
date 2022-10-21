@@ -39,7 +39,6 @@ nav {
 
 main {
     max-width: 1200px;
-    margin: auto;
 }
 
 h1 {
@@ -49,7 +48,8 @@ h1 {
     font-weight: normal;
     text-align: center;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 a {
@@ -59,11 +59,8 @@ a {
 }
 
 p {
-    padding: 10px;
-}
-
-footer {
-    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 footer ul {
@@ -175,6 +172,14 @@ footer ul {
     h1{
         font-size: 2rem;
         letter-spacing: 15px;
+    }
+
+    main{
+        margin: auto;
+    }
+
+    footer {
+        margin: auto;
     }
 
     .nav-link {
