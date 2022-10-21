@@ -44,8 +44,8 @@ main {
 
 h1 {
     font-family: 'zero-hour';
-    font-size: 2rem;
-    letter-spacing: 15px;
+    font-size: 1.75rem;
+    letter-spacing: 10px;
     font-weight: normal;
     text-align: center;
     width: 100%;
@@ -131,7 +131,9 @@ footer ul {
     border-radius: 20px;
     -webkit-filter: drop-shadow(0 0 10px #000000);
     filter: drop-shadow(0 0 10px #000000);
-    padding: 20px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom:20px;
     width: 100%;
     max-width: 650px;
     display: flex;
@@ -169,6 +171,11 @@ footer ul {
         list-style: none;
         justify-content: right;
         margin: 15px;
+    }
+
+    h1{
+        font-size: 2rem;
+        letter-spacing: 15px;
     }
 
     .nav-link {

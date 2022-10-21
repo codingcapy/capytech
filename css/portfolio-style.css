@@ -9,13 +9,12 @@ notes: CSS style for Capytech portfolio
 .video {
     border: solid 2px lightseagreen;
     border-radius: 15px;
-    width: 375px;
+    width: 365px;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
 
 #portfolio-main h1 {
@@ -29,5 +28,6 @@ notes: CSS style for Capytech portfolio
     .video {
         width: 100%;
         max-width: 650px;
+        margin: auto;
     }
 }
