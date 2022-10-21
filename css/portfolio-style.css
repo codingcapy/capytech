@@ -1,16 +1,22 @@
 
-#portfolio{
-    max-width: 1900px;
+#videos{
+
+}
+
+.video{
+    border:solid 2px lightseagreen;
+    border-radius: 15px;
+    width: 375px;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
 }
 
-.video{
-    border:solid 2px lightseagreen;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+@media (min-width:720px){
+    .video{
+        width: 100%;
+    }
 }
