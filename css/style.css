@@ -139,7 +139,6 @@ footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
 
 #languages {
@@ -206,6 +205,9 @@ footer ul {
 
     #languages {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    #paul-neon{
+        margin: auto;
     }
 }
 
