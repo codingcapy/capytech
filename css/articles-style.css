@@ -1,13 +1,18 @@
-
 #articles-main img {
+    width: 325px;
+    margin: 0;
+    padding: 0;
     display: flex;
-    width: 100%;
-    max-width: 650px;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
 }
 
-@media(min-width:760px){
-    #articles-main img{
+@media(min-width:760px) {
+    #articles-main img {
         margin: auto;
-        border-radius: 15px;
+        display: flex;
+        width: 100%;
+        max-width: 650px;
     }
 }
