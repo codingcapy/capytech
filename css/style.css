@@ -90,6 +90,9 @@ footer {
 
 footer ul {
     width: 250px;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
 .show {
