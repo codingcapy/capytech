@@ -26,6 +26,12 @@
         max-width: 650px;
     }
     #scrum-img{
+        width: 700px;
+        max-width: 700px;
+    }
+}
+@media(min-width:1000px) {
+    #scrum-img{
         width: 950px;
         max-width: 950px;
     }
