@@ -1,4 +1,4 @@
-#articles-main img {
+#twt-logo {
     width: 325px;
     margin: 0;
     padding: 0;
@@ -19,16 +19,14 @@
 }
 
 @media(min-width:760px) {
-    #articles-main img {
+    #twt-logo {
         margin: auto;
         display: flex;
         width: 100%;
         max-width: 650px;
     }
     #scrum-img{
-        margin: auto;
-        display: flex;
-        width: 100%;
-        max-width: 650px;
+        width: 950px;
+        max-width: 950px;
     }
 }
