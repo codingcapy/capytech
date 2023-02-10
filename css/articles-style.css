@@ -8,8 +8,24 @@
     border-radius: 15px;
 }
 
+#scrum-img{
+    width: 325px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+}
+
 @media(min-width:760px) {
     #articles-main img {
+        margin: auto;
+        display: flex;
+        width: 100%;
+        max-width: 650px;
+    }
+    #scrum-img{
         margin: auto;
         display: flex;
         width: 100%;
