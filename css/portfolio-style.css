@@ -24,7 +24,7 @@ notes: CSS style for Capytech portfolio
     padding-bottom: 25px;
 }
 
-#banking-sys-protoype-img{
+#banking-sys-protoype-img {
     border-radius: 20px;
     -webkit-filter: drop-shadow(0 0 10px #000000);
     filter: drop-shadow(0 0 10px #000000);
@@ -37,15 +37,30 @@ notes: CSS style for Capytech portfolio
     width: 325px;
 }
 
+#art-gallery-img {
+    width: 325px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
 @media (min-width:720px) {
     .video {
         width: 100%;
         max-width: 650px;
         margin: auto;
     }
-    #banking-sys-protoype-img{
+
+    #banking-sys-protoype-img {
         width: 100%;
         max-width: 850px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #art-gallery-img {
+        width: 100%;
+        max-width: 400px;
         display: flex;
         justify-content: center;
         margin: auto;

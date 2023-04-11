@@ -8,7 +8,7 @@
     border-radius: 15px;
 }
 
-#scrum-img{
+.scrum-img {
     width: 325px;
     margin: 0;
     padding: 0;
@@ -25,13 +25,15 @@
         width: 100%;
         max-width: 650px;
     }
-    #scrum-img{
+
+    .scrum-img {
         width: 700px;
         max-width: 700px;
     }
 }
+
 @media(min-width:1000px) {
-    #scrum-img{
+    #scrum-img {
         width: 950px;
         max-width: 950px;
     }
