@@ -1,11 +1,5 @@
-#twt-logo {
-    width: 325px;
+figure {
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    border-radius: 15px;
 }
 
 .scrum-img {
@@ -16,9 +10,50 @@
     justify-content: center;
     margin: auto;
     border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.scrum-img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.articles-img {
+    width: 325px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.articles-img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+#twt-logo {
+    width: 325px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+}
+
+#articles-main {
+    padding-left: 10px;
 }
 
 @media(min-width:760px) {
+    .scrum-img {
+        width: 700px;
+        max-width: 700px;
+    }
+
     #twt-logo {
         margin: auto;
         display: flex;
@@ -26,10 +61,18 @@
         max-width: 650px;
     }
 
-    .scrum-img {
-        width: 700px;
-        max-width: 700px;
+    #articles-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #articles-section article {
+        margin: 10px;
+        border: 2px solid white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
 }
 
 @media(min-width:1000px) {

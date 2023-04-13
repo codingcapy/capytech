@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<!--
+    author: Paul Kim
+    date: October 20, 2022
+    version: 1.2
+    notes: Capytech portfolio page
+-->
+
+<head>
+    <title>CapyTech | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/menu.js" defer="defer"></script>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="top-bar">
+                <a href="../index.html"><img src="../image/icon.jpg" alt="Capytech Icon" id="capytech-icon"></a>
+                <button class="hamburger-menu">&#9776;</button>
+            </div>
+            <nav>
+                <ul id="nav-ul">
+                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="portfolio-main">
+                <h1>Capytech Portfolio</h1>
+                <h2>Current Projects</h2>
+                <h3>Banking System Prototype II</h3>
+                <img src="../image/banking-sys-python.jpg" alt="Banking System Prototype II"
+                    id="banking-sys-protoype-img">
+                <p>Github: </p>
+                <a href="https://github.com/codingcapy/BankingSysPrototype" target="_blank">Banking System Prototype</a>
+                <p>This project is a banking system prototype program written using object-oriented programming in
+                    Python.</p>
+                <p>The user can create instances of the Profile and Account class objects that are stored in arrays and
+                    saved into csv files at program termination, and are retrieved and parsed into their appropriate
+                    objects before being appended into their appropriate arrays at program launch.
+                </p>
+                <p>The user can also modify attributes of the Profile class object instances via an edit feature, and
+                    can deactivate profiles and accounts by manipulating their status attributes. </p>
+                <p>The display feature allows the user to display profiles in sorted order by the attribute of their
+                    choice.</p>
+                <p>The search feature allows the user to search a profile by an attribute of their choice that qualifies
+                    as the primary key.</p>
+                <p>Transactions such as deposit, withdrawal and funds transfer between accounts can be performed by the
+                    user by calling the appropriate functions using appropriate program features.</p>
+                <p>All search, funds transfer and deactivation features use TimSort to sort the array and uses binary
+                    search to
+                    search for the profile or account in order to reduce time complexity.</p>
+                <p>Every feature is safe-guarded in terms of data type input validation.</p>
+                <p>Please feel free to check out the project at:</p>
+                <a href="https://github.com/codingcapy/BankingSystemProject">Banking System Project</a>
+
+            </div>
+        </main>
+        <footer>
+            <div id="footer-wrapper1">
+                <div id="footer-contact">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>T: +1 (778) 994-4939</li>
+                        <li>E: spkim0921@gmail.com</li>
+                    </ul>
+                </div>
+                <div id="footer-location">
+                    <h2>Location</h2>
+                    <ul>
+                        <li>North Vancouver, BC</li>
+                        <li>Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright&copy; 2022 Capytech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

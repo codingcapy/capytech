@@ -41,116 +41,96 @@
         </header>
 
         <main>
-
             <div id="portfolio-main">
                 <h1>Capytech Portfolio</h1>
                 <h2>Current Projects</h2>
-                <h3>Banking System Prototype II</h3>
-                <img src="../image/banking-sys-python.jpg" alt="Banking System Prototype II"
-                    id="banking-sys-protoype-img">
-                <p>This project is a banking system prototype program written using object-oriented programming in
-                    Python.</p>
-                <p>The user can create instances of the Profile and Account class objects that are stored in arrays and
-                    saved into csv files at program termination, and are retrieved and parsed into their appropriate
-                    objects before being appended into their appropriate arrays at program launch.
-                </p>
-                <p>The user can also modify attributes of the Profile class object instances via an edit feature, and
-                    can deactivate profiles and accounts by manipulating their status attributes. </p>
-                <p>The display feature allows the user to display profiles in sorted order by the attribute of their
-                    choice.</p>
-                <p>The search feature allows the user to search a profile by an attribute of their choice that qualifies
-                    as the primary key.</p>
-                <p>Transactions such as deposit, withdrawal and funds transfer between accounts can be performed by the
-                    user by calling the appropriate functions using appropriate program features.</p>
-                <p>All search, funds transfer and deactivation features use TimSort to sort the array and uses binary
-                    search to
-                    search for the profile or account in order to reduce time complexity.</p>
-                <p>Every feature is safe-guarded in terms of data type input validation.</p>
-                <p>Please feel free to check out the project at:</p>
-                <a href="https://github.com/codingcapy/BankingSystemProject">Banking System Project</a>
-                <br>
-                <br>
-                <h3>Art Gallery Web App</h3>
-                <img src="../image/art-gallery-web-app.jpg" alt="Art Gallery Web App" id="art-gallery-img">
-                <p>This is a web app I developed for a talented artist who wanted her customers to be able to browse her
-                    shop at conventions without necessarily having to wait near her booth physically to look at her
-                    products.</p>
-                <p>Stack used is HTML5, CSS3, and JS ES6.</p>
-                <p>There are a total of 10 categories and each can be
-                    expanded and collapsed on click/tab. The background color changes and the pointer rotates 108
-                    degrees.</p>
-                <p>The end user can scroll horizontally to browse through products under each category. The
-                    screen auto-scrolls to the location at which the user tapped the category, and the "to-top" button
-                    appears on the lower right once the user scrolls down the page and disappears as the screen
-                    approaches the top of the page.</p>
+                <div id="current-projects-section">
+                    <article>
+                        <a href="./portfolio1.html">
+                            <figure>
+                                <img src="../image/banking-sys-python.jpg" alt="Banking System Prototype II"
+                                    class="portfolio-img">
+                            </figure>
+                            <figcaption>
+                                <h3>Banking System Prototype II</h3>
+                                <p>This project is a banking system prototype program written using object-oriented
+                                    programming
+                                    in
+                                    Python.</p>
+                            </figcaption>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="./portfolio2.html">
+                            <figure>
+                                <img src="../image/art-gallery-web-app.jpg" alt="Art Gallery Web App"
+                                    class="portfolio-img">
 
-                <p>Please feel free to check out the live prototype at:</p>
-                <a href="https://codingcapy.github.io/jellyfishforest/" target="_blank">Art Gallery Web App
-                    Prototype</a>
-                <br />
-                <br />
-                <h3>Banking System Prototype</h3>
-                <img src="../image/banking-sys-prototype.jpg" alt="Banking System Prototype"
-                    id="banking-sys-protoype-img">
-                <p>Having worked for a financial institution for the past 7 years, I have decided to make a personal
-                    project of building a banking system prototype that also functions as a CRM.</p>
-                <p>This prototype uses Java WindowBuilder library to render a graphical user interface. It initializes
-                    with a login window consisting of username and password labels and textfields, as well as a forgot
-                    password edge case button which prompts the user to enter an email address in order to send them a
-                    temporary password.</p>
-                <p>Once the user logs in, the home frame is called and the login window is disposed. The user can search
-                    for a profile by various means and can also display all existing profiles to choose from. The user
-                    can
-                    also create a new profile.</p>
-                <p>When the user accesses a profile, the profile dialog is called, containing the first name, middle
-                    name, last name, date of birth, phone number, address, and email address of the client. These fields
-                    are locked until the user presses the 'Edit' button whereby they can modify the data and save it.
-                </p>
-                <p>The profile dialog also contains a list of all the accounts the client has and an account can be
-                    selected to perform transactions such as withdraw, deposit, and transfer funds. The user can also
-                    create and delete accounts.</p>
-                <p>The user can also add notes into the client's profile.</p>
-                <p>The data is contained in csv files which are loaded into the program at launch and all changes saved
-                    as the
-                    program is closed.</p>
-                <p>This project is by no means finished; I have ambitious plans of adding more features such as credit
-                    cards, mortgages, lines of credits, home equity lines of credits, and term deposits.</p>
-                <p>Please feel free to check it out on my GitHub at: </p>
-                <a href="https://github.com/codingcapy/BankingSysPrototype" target="_blank">Banking System Prototype</a>
-                <br />
-                <br />
+                            </figure>
+                            <figcaption>
+                                <h3>Art Gallery Web App</h3>
+                                <p>This is a web app I developed for a talented artist who wanted her customers to be
+                                    able to browse
+                                    her
+                                    shop at conventions without necessarily having to wait near her booth physically to
+                                    look at her
+                                    products.</p>
+                            </figcaption>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="./portfolio3.html">
+                            <figure>
+                                <img src="../image/banking-sys-prototype.jpg" alt="Banking System Prototype"
+                                    class="portfolio-img">
+                            </figure>
+                            <figcaption>
+                                <h3>Banking System Prototype</h3>
+                                <p>Having worked for a financial institution for the past 7 years, I have decided to
+                                    make a personal
+                                    project of building a banking system prototype that also functions as a CRM.</p>
+                            </figcaption>
+                        </a>
+                    </article>
+                </div>
                 <h2>GameProjects</h2>
-                <p>The following are game dev projects I have worked on by myself (I never consider them 100% finished,
-                    the more time and effort put into a project, the better it gets)</p>
-                <p>Therefore I always call them prototypes until they are actually shipped or in beta-test phase</p>
+                <p>The following are game dev projects I have worked on by myself (I never consider them 100%
+                    finished,
+                    the more time and effort put into a project, the better it gets) <br> Therefore I always call them
+                    prototypes until they are actually shipped or in beta-test phase</p>
                 <h3>Game Projects using Python Pygame Library</h3>
-                <h4>2D ARPG Project</h4>
-                <video src="../video/capy-game-design3.mp4" controls class="video"></video>
-                <p>This is actually my third game development project, all written in Python and using the pygame
-                    library. This project taught me animations, screen scrolling, and tile generation. This is still a
-                    work in progress, and I am still adding features and working on balancing.</p>
-                <h4>Sprites credits to (sources):</h4>
-                <ul>
-                    <li><a href="https://robertpinero.itch.io/free-rpg-mv-class-sprites" target="_blank">Red Knight</a>
-                    </li>
-                    <li><a href="https://www.pngwing.com/en/free-png-zrzud" target="_blank">Rock</a></li>
-                    <li><a href="https://bscully.tumblr.com/post/616451629695352832/learn-log-4-grassy-grove"
-                            target="_blank">Grass</a></li>
-                    <li><a href="https://www.spriters-resource.com/pc_computer/maplestory/sheet/16216/"
-                            target="_blank">Jiangshi Mushroom</a></li>
-                </ul>
-                <h4>2D Shoot'em-up Project</h4>
-                <video src="../video/capy-game-design1.mp4" controls class="video"></video>
-                <p>This is my second game development project, fully written in Python and using the pygame library. I
-                    learned to procedurally generate enemies through this project. I am considering adding more features
-                    such as loot drops, upgrades, and boss addition in the future.</p>
-                <h4>Sprites credits to (sources):</h4>
-                <ul>
-                    <li><a href="https://craftpix.net/freebies/free-space-shooter-game-gui/"
-                            target="_blank">Spaceships</a>
-                    </li>
-                    <li><a href="https://www.pexels.com/photo/stars-1257860/" target="_blank">Background</a></li>
-                </ul>
+                <div id="pygames-section">
+                    <article>
+                        <a href="./portfolio4.html">
+                            <figure>
+                                <video src="../video/capy-game-design3.mp4" controls class="video"></video>
+                            </figure>
+                            <figcaption>
+                                <h4>2D ARPG Project</h4>
+                                <p>This is actually my third game development project, all written in Python and using
+                                    the pygame
+                                    library. This project taught me animations, screen scrolling, and tile generation.
+                                    This is still
+                                    a
+                                    work in progress, and I am still adding features and working on balancing.</p>
+                            </figcaption>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="./portfolio5.html">
+                            <figure>
+                                <video src="../video/capy-game-design1.mp4" controls class="video"></video>
+                            </figure>
+                            <figcaption>
+                                <h4>2D Shoot'em-up Project</h4>
+                                <p>This is my second game development project, fully written in Python and using the
+                                    pygame library. I learned to procedurally generate enemies through this project. I
+                                    am considering adding more features such as loot drops, upgrades, and boss addition
+                                    in the future.</p>
+                            </figcaption>
+                        </a>
+                    </article>
+                </div>
             </div>
         </main>
         <footer>
