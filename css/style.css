@@ -117,6 +117,12 @@ footer ul {
     transition: all 0.3s ease;
 }
 
+#capytech-icon {
+    max-width: 60px;
+    padding: 5px;
+    padding-left: 10px
+}
+
 #top-bar {
     display: flex;
     justify-content: space-between;
@@ -215,6 +221,12 @@ footer ul {
 
     .hamburger-menu {
         display: none;
+    }
+
+    #capytech-icon {
+        max-width: 80px;
+        padding: 5px;
+        padding-left: 10px
     }
 
     #nav-ul {
