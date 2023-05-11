@@ -1,0 +1,101 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "untitled.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/Pellet Town.tmx": {
+            "scale": 1.2802380952380952,
+            "selectedLayer": 12,
+            "viewCenter": {
+                "x": 419.4532267063418,
+                "y": 239.79914450437047
+            }
+        },
+        "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/collisionTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/pokemonStyleGameTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "bush.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "collision.tsx": {
+            "scaleInEditor": 1
+        },
+        "desert.tsx": {
+            "scaleInDock": 1
+        },
+        "red_knight_assets.tsx": {
+            "scaleInDock": 1
+        },
+        "red_knight_background.tmx": {
+            "scale": 0.09401041666666665,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1510.4709141274243,
+                "y": 3042.216066481995
+            }
+        },
+        "rock.tsx": {
+            "scaleInDock": 1
+        },
+        "snow.tsx": {
+            "scaleInDock": 1
+        },
+        "tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tree1.tsx": {
+            "scaleInDock": 1
+        },
+        "tree2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "untitled.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 272.72727272727275,
+                "y": 272.72727272727275
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/USER/vscode-workspace/game-project-9 rpg game/assets/tiled",
+    "map.height": 50,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 12,
+    "map.tileWidth": 12,
+    "map.width": 50,
+    "openFiles": [
+        "untitled.tmx",
+        "tileset.tsx",
+        "untitled.tmx"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "collision.tsx",
+        "untitled.tmx",
+        "red_knight_background.tmx",
+        "tileset.tsx",
+        "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/pokemonStyleGameTileset.tsx",
+        "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/Pellet Town.tmx",
+        "bush.tsx",
+        "tree2.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 12,
+        "width": 12
+    }
+}
