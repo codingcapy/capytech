@@ -416,7 +416,7 @@ addEventListener('keyup', (event) => {
     }
 }) // end event listener
 
-$upButton.mousedown(function () {
+$upButton.bind('touchstart mousedown', function () {
     keys.up.pressed = true;
 });
 
@@ -424,7 +424,7 @@ $upButton.mouseup(function () {
     keys.up.pressed = false;
 });
 
-$leftButton.mousedown(function () {
+$leftButton.bind('touchstart mousedown', function () {
     keys.left.pressed = true;
 });
 
@@ -432,7 +432,7 @@ $leftButton.mouseup(function () {
     keys.left.pressed = false;
 });
 
-$downButton.mousedown(function () {
+$downButton.bind('touchstart mousedown', function () {
     keys.down.pressed = true;
 });
 
@@ -440,7 +440,7 @@ $downButton.mouseup(function () {
     keys.down.pressed = false;
 });
 
-$rightButton.mousedown(function () {
+$rightButton.bind('touchstart mousedown', function () {
     keys.right.pressed = true;
 });
 
