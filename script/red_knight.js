@@ -109,7 +109,7 @@ class Boundary {
         this.height = 48;
     } // end constructor
     draw() {
-        canvasContext.fillStyle = 'rgba(255,0,0,0.3)';
+        canvasContext.fillStyle = 'rgba(255,0,0,0)';
         canvasContext.fillRect(this.position.x, this.position.y, this.width, this.height);
     } // end function draw
 } // end class Boundary
