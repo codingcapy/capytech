@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "untitled.tmx",
+    "activeFile": "background.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -24,11 +24,20 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "background.tmx": {
+            "scale": 1.4123333333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 299.50436629690824,
+                "y": 299.5043662969082
+            }
+        },
         "bush.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "collision.tsx": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "desert.tsx": {
@@ -78,16 +87,16 @@
     "map.tileWidth": 12,
     "map.width": 50,
     "openFiles": [
-        "untitled.tmx",
         "tileset.tsx",
-        "untitled.tmx"
+        "background.tmx"
     ],
     "project": "untitled.tiled-project",
     "recentFiles": [
+        "tileset.tsx",
+        "background.tmx",
         "collision.tsx",
         "untitled.tmx",
         "red_knight_background.tmx",
-        "tileset.tsx",
         "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/pokemonStyleGameTileset.tsx",
         "C:/Users/USER/vscode-workspace/game-project-5 pokemon game/html/tiled/Pellet Town.tmx",
         "bush.tsx",

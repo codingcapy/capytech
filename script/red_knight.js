@@ -9,6 +9,10 @@ rpg game
 
 const canvas = document.getElementById('canvas');
 const canvasContext = canvas.getContext('2d');
+const $upButton = $('#up-button');
+const $leftButton = $('#left-button');
+const $downButton = $('#down-button');
+const $rightButton = $('#right-button');
 let offset;
 if (window.innerWidth < 740) {
     canvas.width = 400;
@@ -190,9 +194,9 @@ function animate() {
     // canvasContext.fillStyle = 'black';
     // canvasContext.fillRect(0, 0, canvas.width, canvas.height);
     background.draw();
-    // boundaries.forEach(boundary => {
-    //     boundary.draw();
-    // })
+    boundaries.forEach(boundary => {
+        boundary.draw();
+    })
     player.draw();
     foreground.draw();
     let moving = true;
@@ -411,5 +415,37 @@ addEventListener('keyup', (event) => {
 
     }
 }) // end event listener
+
+$upButton.mousedown(function () {
+    keys.up.pressed = true;
+});
+
+$upButton.mouseup(function () {
+    keys.up.pressed = false;
+});
+
+$leftButton.mousedown(function () {
+    keys.left.pressed = true;
+});
+
+$leftButton.mouseup(function () {
+    keys.left.pressed = false;
+});
+
+$downButton.mousedown(function () {
+    keys.down.pressed = true;
+});
+
+$downButton.mouseup(function () {
+    keys.down.pressed = false;
+});
+
+$rightButton.mousedown(function () {
+    keys.right.pressed = true;
+});
+
+$rightButton.mouseup(function () {
+    keys.right.pressed = false;
+});
 
 animate(); // init game

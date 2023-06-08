@@ -183,7 +183,18 @@ footer ul {
     margin: auto;
 }
 
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 300px;
+}
 
+#buttons button {
+    margin: 5px;
+    background-color: rgb(38, 38, 116);
+    color: white;
+    border: solid 2px;
+}
 
 @media (min-width:720px) {
 
