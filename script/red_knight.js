@@ -416,6 +416,8 @@ addEventListener('keyup', (event) => {
     }
 }) // end event listener
 
+/*Mobile device controls*/
+
 $upButton.bind('touchstart mousedown', function () {
     keys.up.pressed = true;
 });
