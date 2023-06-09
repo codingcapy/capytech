@@ -63,6 +63,7 @@ notes: CSS style for Capytech portfolio
 @media (min-width:720px) {
     .portfolio-img {
         max-height: 325px;
+        max-width: 325px;
         width: auto;
     }
 

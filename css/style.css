@@ -198,6 +198,10 @@ footer ul {
     padding-bottom: 15px;
 }
 
+#canvas {
+    border: solid white 2px;
+}
+
 @media (min-width:720px) {
 
     header {

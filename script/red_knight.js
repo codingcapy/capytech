@@ -15,7 +15,7 @@ const $downButton = $('#down-button');
 const $rightButton = $('#right-button');
 let offset;
 if (window.innerWidth < 740) {
-    canvas.width = 400;
+    canvas.width = 300;
     canvas.height = 400;
     offset = { x: -475, y: -710 };
 }
