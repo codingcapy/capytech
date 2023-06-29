@@ -796,6 +796,26 @@ $rightButton.mouseup(function () {
     keys.right.pressed = false;
 });
 
+$upButton.bind('touchstart mousedown', function () {
+    keys.up.pressed = true;
+});
+
+$upButton.bind('touchend mouseup', function () {
+    keys.up.pressed = false;
+});
+
+$leftButton.bind('touchstart mousedown', function () {
+    keys.left.pressed = true;
+});
+
+$rightButton.bind('touchstart mousedown', function () {
+    keys.right.pressed = true;
+});
+
+$rightButton.mouseup(function () {
+    keys.right.pressed = false;
+});
+
 $downButton.bind('touchstart mousedown', function () {
     keys.down.pressed = true;
 });
