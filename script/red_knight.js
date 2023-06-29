@@ -764,37 +764,37 @@ addEventListener('keyup', (event) => {
     }
 }) // end event listener
 
-$upButton.mousedown(function () {
-    keys.up.pressed = true;
-});
+// $upButton.mousedown(function () {
+//     keys.up.pressed = true;
+// });
 
-$upButton.mouseup(function () {
-    keys.up.pressed = false;
-});
+// $upButton.mouseup(function () {
+//     keys.up.pressed = false;
+// });
 
-$leftButton.mousedown(function () {
-    keys.left.pressed = true;
-});
+// $leftButton.mousedown(function () {
+//     keys.left.pressed = true;
+// });
 
-$leftButton.mouseup(function () {
-    keys.left.pressed = false;
-});
+// $leftButton.mouseup(function () {
+//     keys.left.pressed = false;
+// });
 
-$downButton.mousedown(function () {
-    keys.down.pressed = true;
-});
+// $downButton.mousedown(function () {
+//     keys.down.pressed = true;
+// });
 
-$downButton.mouseup(function () {
-    keys.down.pressed = false;
-});
+// $downButton.mouseup(function () {
+//     keys.down.pressed = false;
+// });
 
-$rightButton.mousedown(function () {
-    keys.right.pressed = true;
-});
+// $rightButton.mousedown(function () {
+//     keys.right.pressed = true;
+// });
 
-$rightButton.mouseup(function () {
-    keys.right.pressed = false;
-});
+// $rightButton.mouseup(function () {
+//     keys.right.pressed = false;
+// });
 
 $upButton.bind('touchstart mousedown', function () {
     keys.up.pressed = true;
@@ -808,19 +808,15 @@ $leftButton.bind('touchstart mousedown', function () {
     keys.left.pressed = true;
 });
 
-$rightButton.bind('touchstart mousedown', function () {
-    keys.right.pressed = true;
-});
-
-$rightButton.mouseup(function () {
-    keys.right.pressed = false;
+$leftButton.bind('touchend mouseup', function () {
+    keys.left.pressed = false;
 });
 
 $downButton.bind('touchstart mousedown', function () {
     keys.down.pressed = true;
 });
 
-$downButton.mouseup(function () {
+$downButton.bind('touchend mouseup', function () {
     keys.down.pressed = false;
 });
 
@@ -828,7 +824,7 @@ $rightButton.bind('touchstart mousedown', function () {
     keys.right.pressed = true;
 });
 
-$rightButton.mouseup(function () {
+$rightButton.bind('touchend mouseup', function () {
     keys.right.pressed = false;
 });
 
