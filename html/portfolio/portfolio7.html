@@ -12,8 +12,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/smup.css">
     <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
     <script src="../../script/menu.js" defer="defer"></script>
+    <script src="../../script/smup.js" defer="defer"></script>
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -48,23 +50,29 @@
             <div id="portfolio-main">
                 <h1>Capytech Portfolio</h1>
                 <h2>GameProjects</h2>
-                <h3>Game Projects using Python Pygame Library</h3>
-                <h4>2D ARPG Project</h4>
-                <video src="../video/capy-game-design3.mp4" controls class="video"></video>
-                <p>This is actually my third game development project, all written in Python and using the pygame
-                    library. This project taught me animations, screen scrolling, and tile generation. This is still a
-                    work in progress, and I am still adding features and working on balancing.</p>
-                <h4>Sprites credits to (sources):</h4>
-                <ul>
-                    <li><a href="https://robertpinero.itch.io/free-rpg-mv-class-sprites" target="_blank">Red Knight</a>
-                    </li>
-                    <li><a href="https://www.pngwing.com/en/free-png-zrzud" target="_blank">Rock</a></li>
-                    <li><a href="https://bscully.tumblr.com/post/616451629695352832/learn-log-4-grassy-grove"
-                            target="_blank">Grass</a></li>
-                    <li><a href="https://www.spriters-resource.com/pc_computer/maplestory/sheet/16216/"
-                            target="_blank">Jiangshi Mushroom</a></li>
-                </ul>
-            </div>
+                <h3>Game Projects using JavaScript</h3>
+                <h4>JavaScript Smup Project</h4>
+                <div id="container">
+                    <div id="lives"></div>
+                    <div id="score"></div>
+                    <div id="level"></div>
+                    <div id="game-over"></div>
+                    <canvas id="canvas"></canvas>
+                </div> <!--end div container-->
+                <div id="ui">
+                    <div id="buttons">
+                        <div></div>
+                        <button id="up-button">&#8593;</button>
+                        <div></div>
+                        <button id="left-button">&#8592;</button>
+                        <button id="down-button">&#8595;</button>
+                        <button id="right-button">&#8594;</button>
+                    </div><!--end div buttons-->
+                    <button id="shoot-button">Laser</button>
+                </div> <!--end div ui-->
+                <h3>Instructions:</h3>
+                <p>Use <strong>WASD or the four buttons above</strong> to move the yellow spacecraft. Use
+                    <strong>L</strong> to <strong>shoot lasers</strong>.</p>
         </main>
         <footer>
             <div id="footer-wrapper1">

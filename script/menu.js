@@ -13,13 +13,22 @@ vector menu.
 More on JavaScript in a future lesson
 */
 
+const $mainNav = $('#main-nav');
+const hamburgerMenu = document.getElementById('hamburger-menu');
 
-(function(d){
+$mainNav.hide();
+
+hamburgerMenu.addEventListener('click', function(){
+	$mainNav.slideToggle();
+})
+
+
+// (function(d){
 	
-	const $nav = d.querySelector('nav');
-	const $btn = d.querySelector('.hamburger-menu');	
-	$btn.addEventListener('click', function(){		
-		$nav.classList.toggle('show');		
-	});	
+// 	const $nav = d.querySelector('nav');
+// 	const $btn = d.querySelector('.hamburger-menu');	
+// 	$btn.addEventListener('click', function(){		
+// 		$nav.classList.toggle('show');		
+// 	});	
 	
-})(document);
+// })(document);

@@ -1,0 +1,178 @@
+#buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 300px;
+}
+
+#buttons button {
+  margin: 5px;
+  background-color: rgb(38, 38, 116);
+  color: white;
+  border: solid 2px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#canvas {
+  border: solid white 2px;
+}
+
+#container {
+  display: inline-block;
+  position: relative;
+  border: 2px solid black;
+}
+
+#container2 {
+  background: linear-gradient(to bottom, rgb(29, 50, 143), black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#enemy-name {
+  font-size: 14px;
+  padding: 2px;
+}
+
+#enemy-hp {
+  position: relative;
+}
+
+#enemy-hp-bar-max {
+  height: 5px;
+  background-color: grey;
+  margin: 2px;
+}
+
+#enemy-hp-bar-actual {
+  height: 5px;
+  background-color: rgb(39, 211, 39);
+  position: absolute;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#player-name {
+  font-size: 14px;
+  padding: 2px;
+}
+
+#player-hp {
+  position: relative;
+}
+
+#player-hp-bar-max {
+  height: 5px;
+  background-color: grey;
+  margin: 2px;
+}
+
+#player-hp-bar-actual {
+  height: 5px;
+  background-color: rgb(39, 211, 39);
+  position: absolute;
+  margin-left: 2px;
+  margin-right: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#battle-ui {
+  background: linear-gradient(to right, blue, black);
+  color: white;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 2px solid white;
+  display: flex;
+}
+
+#battle-menu {
+  width: 66.66%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: linear-gradient(to right, blue, black);
+  color: white;
+}
+
+#attack-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.33%;
+  border-left: 2px solid white;
+}
+
+#attack-type h1 {
+  font-size: 16px;
+}
+
+#battle-msg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, blue, black);
+  color: white;
+  padding: 15px;
+  display: none;
+  cursor: pointer;
+}
+
+#user-interface {
+  display: none;
+}
+
+#enemy-stats {
+  background-color: rgba(38, 38, 131, 0.75);
+  color: white;
+  width: 125px;
+  height: 75px;
+  position: absolute;
+  top: 55px;
+  left: 170px;
+  border: 4px solid white;
+}
+
+#player-stats {
+  background-color: rgba(38, 38, 131, 0.75);
+  color: white;
+  width: 125px;
+  height: 75px;
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  border: 4px solid white;
+}
+
+@media (min-width: 720px) {
+  #enemy-stats {
+    top: 125px;
+    left: 490px;
+  }
+  #player-stats {
+    top: 125px;
+    left: 50px;
+  }
+  #battle-ui {
+    height: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  #enemy-stats {
+    left: 800px;
+  }
+}
