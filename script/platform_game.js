@@ -25,7 +25,6 @@ else if (window.innerWidth < 1000) {
 else {
     canvas.width = 1000;
     canvas.height = 700;
-    offset = { x: -180, y: -570 }
     playerPosition = { x: 55, y: 300 }
 }
 const $upButton = $('#up-button');
@@ -300,6 +299,9 @@ class Player extends Sprite {
             width: 200,
             height: 80
         };
+        if (window.innerWidth < 740) {
+            this.cameraBox.position.width = 50;
+        }
     } // end function updateCameraBox
     panCameraToLeft() {
         const cameraBoxRight = this.cameraBox.position.x + this.cameraBox.width
