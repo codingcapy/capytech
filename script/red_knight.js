@@ -828,15 +828,3 @@ $rightButton.bind('touchend mouseup', function () {
 });
 
 animate(); // init game
-
-/*header nav toggle function*/
-
-(function (d) {
-
-    const $nav = d.querySelector('nav');
-    const $btn = d.querySelector('.hamburger-menu');
-    $btn.addEventListener('click', function () {
-        $nav.classList.toggle('show');
-    });
-
-})(document);

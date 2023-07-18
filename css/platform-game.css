@@ -1,0 +1,32 @@
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 200px;
+}
+
+#buttons button {
+    margin: 5px;
+    border: solid 1px black;
+    padding: 20px;
+    background-color: rgb(27, 27, 153);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#dash-button{
+    background-color: rgb(27, 27, 153);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+#attack2-button{
+    background-color: rgb(27, 27, 153);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#ui {
+    display: flex;
+}
