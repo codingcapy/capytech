@@ -33,7 +33,11 @@ notes: CSS style for Capytech portfolio
     transition: all 0.3s ease;
 }
 
-
+#current-projects-section article {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: solid 1px white;
+}
 
 #portfolio-main h1 {
     margin: 0;
@@ -41,6 +45,8 @@ notes: CSS style for Capytech portfolio
     padding-top: 35px;
     padding-bottom: 25px;
 }
+
+
 
 #banking-sys-protoype-img {
     border-radius: 20px;
