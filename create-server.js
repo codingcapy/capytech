@@ -2,577 +2,669 @@
 author: capytech
 date: August 2, 2023
 version: 1.0
-notes: Server side script
+description: web server for capytech
 */
 
 const http = require('http');
-const { readFileSync } = require('fs');
-const homePage = readFileSync('./html/index.html');
-const aboutPage = readFileSync('./html/about/index.html');
-const portfolioPage = readFileSync('./html/portfolio/index.html');
-const portfolio1Page = readFileSync('./html/portfolio/portfolio1.html');
-const portfolio2Page = readFileSync('./html/portfolio/portfolio2.html');
-const portfolio3Page = readFileSync('./html/portfolio/portfolio3.html');
-const portfolio4Page = readFileSync('./html/portfolio/portfolio4.html');
-const portfolio5Page = readFileSync('./html/portfolio/portfolio5.html');
-const portfolio6Page = readFileSync('./html/portfolio/portfolio6.html');
-const portfolio7Page = readFileSync('./html/portfolio/portfolio7.html');
-const portfolio8Page = readFileSync('./html/portfolio/portfolio8.html');
-const articlesPage = readFileSync('./html/articles/index.html');
-const article1Page = readFileSync('./html/articles/article1.html');
-const article2Page = readFileSync('./html/articles/article2.html');
-const article3Page = readFileSync('./html/articles/article3.html');
-const resumePage = readFileSync('./html/resume/index.html');
-const contactPage = readFileSync('./html/contact/index.html');
-const zeroHourFont = readFileSync('./font/zero-hour.otf');
-const homeStyle = readFileSync('./css/style.css');
-const articlesStyle = readFileSync('./css/articles-style.css');
-const normalizeStyle = readFileSync('./css/normalize.css');
-const platformStyle = readFileSync('./css/platform-game.css');
-const portfolioStyle = readFileSync('./css/portfolio-style.css');
-const redKnightStyle = readFileSync('./css/red-knight.css');
-const smupStyle = readFileSync('./css/smup.css');
-const homeLogic = readFileSync('./script/menu.js');
-const homeLogic2 = readFileSync('./script/jquery-3.7.0.min.js');
-const gsap = readFileSync('./script/gsap.js');
-const platformLogic = readFileSync('./script/platform_game.js');
-const redKnightLogic = readFileSync('./script/red_knight.js');
-const smupLogic = readFileSync('./script/smup.js');
-const homeLogo = readFileSync('./html/image/capyness.png');
-const pythonLogo = readFileSync('./html/image/python.png');
-const javaLogo = readFileSync('./html/image/java.png');
-const cLogo = readFileSync('./html/image/c.png');
-const htmlLogo = readFileSync('./html/image/html5.png');
-const cssLogo = readFileSync('./html/image/css3.png');
-const jsLogo = readFileSync('./html/image/javascript.png');
-const sqlLogo = readFileSync('./html/image/sql.png');
-const nodeLogo = readFileSync('./html/image/nodejs.png');
-const reactLogo = readFileSync('./html/image/Reactjs.png');
-const portfolio1Logo = readFileSync('./html/video/capy-game-design1.mp4');
-const portfolio2Logo = readFileSync('./html/video/capy-game-design3.mp4');
-const portfolio3Logo = readFileSync('./html/image/banking-sys-prototype.jpg');
-const portfolio4Logo = readFileSync('./html/image/art-gallery-web-app.jpg');
-const portfolio5Logo = readFileSync('./html/image/banking-sys-python.jpg');
-const portfolio6Logo = readFileSync('./html/image/red_knight.jpg');
-const portfolio7Logo = readFileSync('./html/image/game-design1-1.jpg');
-const portfolio8Logo = readFileSync('./html/image/platform_game.jpg');
-const article1Logo = readFileSync('./html/image/scrum-board.jpg');
-const article2Logo = readFileSync('./html/image/scrum-project-board.jpg');
-const article3Logo = readFileSync('./html/image/chatgpt.jpg');
-const paulKim = readFileSync('./html/image/paul_kim.jpg');
-const paulImg = readFileSync('./html/image/text-effect.jpg');
-const resume = readFileSync('./html/image/paulkim_resume_2023.jpg');
-const platformBg = readFileSync('./assets/background.png');
-const platformIdle = readFileSync('./assets/Idle.png');
-const platformIdleLeft = readFileSync('./assets/IdleLeft.png');
-const platformRun = readFileSync('./assets/Run.png');
-const platformRunLeft = readFileSync('./assets/RunLeft.png');
-const platformJump = readFileSync('./assets/Jump.png');
-const platformJumpLeft = readFileSync('./assets/JumpLeft.png');
-const platformFall = readFileSync('./assets/Fall.png');
-const platformFallLeft = readFileSync('./assets/FallLeft.png');
-const platformDash = readFileSync('./assets/Dash1.png');
-const platformDashLeft = readFileSync('./assets/DashLeft1.png');
-const platformAttack1 = readFileSync('./assets/Attack1.png');
-const platformAttack1Left = readFileSync('./assets/AttackLeft1.png');
-const platformAttack2 = readFileSync('./assets/Attack2.png');
-const smupBg = readFileSync('./assets/background_image2.jpeg');
-const smupPlayer = readFileSync('./assets/spaceship.png');
-const smupRedEnemy = readFileSync('./assets/red_enemy.png');
-const smupRedEnemy2 = readFileSync('./assets/red_enemy2.png');
-const smupBlueEnemy = readFileSync('./assets/blue_enemy.png');
-const smupBlueEnemy2 = readFileSync('./assets/blue_enemy2.png');
-const smupPlayerBullet = readFileSync('./assets/bullet.png');
-const rpgBg = readFileSync('./assets/tiled/background.png');
-const rpgFg = readFileSync('./assets/tiled/foreground.png');
-const rpgPlayer = readFileSync('./assets/player/down/down_all.png');
-const rpgPlayerLeft = readFileSync('./assets/player/left/left_all.png');
-const rpgPlayerUp = readFileSync('./assets/player/up/up_all.png');
-const rpgPlayerRight = readFileSync('./assets/player/right/right_all.png');
-const rpgBattleBg = readFileSync('./assets/battle_background.jpg');
-const rpgMonster = readFileSync('./assets/monster/mushroom2.png');
-const rpgPlayerBattle = readFileSync('./assets/player/right/right_0.png');
-const rpgPlayerSlash = readFileSync('./assets/player/right_attack/attack_right.png');
-const siteManifest = readFileSync('./html/site.webmanifest');
-const siteManifestPortfolio = readFileSync('./html/portfolio/site.webmanifest');
-const siteManifestArticles = readFileSync('./html/articles/site.webmanifest');
-const siteManifestResume = readFileSync('./html/resume/site.webmanifest');
-const siteManifestAbout = readFileSync('./html/about/site.webmanifest');
-const siteManifestContact = readFileSync('./html/contact/site.webmanifest');
-const faviconBig = readFileSync('./html/favicon-32x32.png');
-const faviconSmall = readFileSync('./html/favicon-16x16.png');
+const fs = require("fs");
+const port = 5000;
+const homePage = './html/index.html'
+const aboutPage = './html/about/index.html';
+const portfolioPage = './html/portfolio/index.html';
+const portfolio1Page = './html/portfolio/portfolio1.html';
+const portfolio2Page = './html/portfolio/portfolio2.html';
+const portfolio3Page = './html/portfolio/portfolio3.html';
+const portfolio4Page = './html/portfolio/portfolio4.html';
+const portfolio5Page = './html/portfolio/portfolio5.html';
+const portfolio6Page = './html/portfolio/portfolio6.html';
+const portfolio7Page = './html/portfolio/portfolio7.html';
+const portfolio8Page = './html/portfolio/portfolio8.html';
+const articlesPage = './html/articles/index.html';
+const article1Page = './html/articles/article1.html';
+const article2Page = './html/articles/article2.html';
+const article3Page = './html/articles/article3.html';
+const resumePage = './html/resume/index.html';
+const contactPage = './html/contact/index.html';
+const zeroHourFont = './font/zero-hour.otf';
+const homeStyle = './css/style.css';
+const articlesStyle = './css/articles-style.css';
+const normalizeStyle = './css/normalize.css';
+const platformStyle = './css/platform-game.css';
+const portfolioStyle = './css/portfolio-style.css';
+const redKnightStyle = './css/red-knight.css';
+const smupStyle = './css/smup.css';
+const homeLogic = './script/menu.js';
+const homeLogic2 = './script/jquery-3.7.0.min.js';
+const gsap = './script/gsap.js';
+const platformLogic = './script/platform_game.js';
+const redKnightLogic = './script/red_knight.js';
+const smupLogic = './script/smup.js';
+const homeLogo = './html/image/capyness.png';
+const pythonLogo = './html/image/python.png';
+const javaLogo = './html/image/java.png';
+const cLogo = './html/image/c.png';
+const htmlLogo = './html/image/html5.png';
+const cssLogo = './html/image/css3.png';
+const jsLogo = './html/image/javascript.png';
+const sqlLogo = './html/image/sql.png';
+const nodeLogo = './html/image/nodejs.png';
+const reactLogo = './html/image/Reactjs.png';
+const portfolio1Logo = './html/video/capy-game-design1.mp4';
+const portfolio2Logo = './html/video/capy-game-design3.mp4';
+const portfolio3Logo = './html/image/banking-sys-prototype.jpg';
+const portfolio4Logo = './html/image/art-gallery-web-app.jpg';
+const portfolio5Logo = './html/image/banking-sys-python.jpg';
+const portfolio6Logo = './html/image/red_knight.jpg';
+const portfolio7Logo = './html/image/game-design1-1.jpg';
+const portfolio8Logo = './html/image/platform_game.jpg';
+const article1Logo = './html/image/scrum-board.jpg';
+const article2Logo = './html/image/scrum-project-board.jpg';
+const article3Logo = './html/image/chatgpt.jpg';
+const paulKim = './html/image/paul_kim.jpg';
+const paulImg = './html/image/text-effect.jpg';
+const resume = './html/image/paulkim_resume_2023.jpg';
+const platformBg = './assets/background.png';
+const platformIdle = './assets/Idle.png';
+const platformIdleLeft = './assets/IdleLeft.png';
+const platformRun = './assets/Run.png';
+const platformRunLeft = './assets/RunLeft.png';
+const platformJump = './assets/Jump.png';
+const platformJumpLeft = './assets/JumpLeft.png';
+const platformFall = './assets/Fall.png';
+const platformFallLeft = './assets/FallLeft.png';
+const platformDash = './assets/Dash1.png';
+const platformDashLeft = './assets/DashLeft1.png';
+const platformAttack1 = './assets/Attack1.png';
+const platformAttack1Left = './assets/AttackLeft1.png';
+const platformAttack2 = './assets/Attack2.png';
+const smupBg = './assets/background_image2.jpeg';
+const smupPlayer = './assets/spaceship.png';
+const smupRedEnemy = './assets/red_enemy.png';
+const smupRedEnemy2 = './assets/red_enemy2.png';
+const smupBlueEnemy = './assets/blue_enemy.png';
+const smupBlueEnemy2 = './assets/blue_enemy2.png';
+const smupPlayerBullet = './assets/bullet.png';
+const rpgBg = './assets/tiled/background.png';
+const rpgFg = './assets/tiled/foreground.png';
+const rpgPlayer = './assets/player/down/down_all.png';
+const rpgPlayerLeft = './assets/player/left/left_all.png';
+const rpgPlayerUp = './assets/player/up/up_all.png';
+const rpgPlayerRight = './assets/player/right/right_all.png';
+const rpgBattleBg = './assets/battle_background.jpg';
+const rpgMonster = './assets/monster/mushroom2.png';
+const rpgPlayerBattle = './assets/player/right/right_0.png';
+const rpgPlayerSlash = './assets/player/right_attack/attack_right.png';
+const siteManifest = './html/site.webmanifest';
+const siteManifestPortfolio = './html/portfolio/site.webmanifest';
+const siteManifestArticles = './html/articles/site.webmanifest';
+const siteManifestResume = './html/resume/site.webmanifest';
+const siteManifestAbout = './html/about/site.webmanifest';
+const siteManifestContact = './html/contact/site.webmanifest';
+const faviconBig = './html/favicon-32x32.png';
+const faviconSmall = './html/favicon-16x16.png';
+
 const server = http.createServer((req, res) => {
-    // console.log('user hit the server');
-    // console.log(req.method)
-    // console.log(req.url)
     const url = req.url;
     if (url == '/') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(homePage)
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(homePage).pipe(res);
+        }
     }
     else if (url == '/html/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(homePage)
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(homePage).pipe(res);
+        }
     }
     // styles request response
     else if (url == '/css/style.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(homeStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(homeStyle).pipe(res);
+        }
     }
     else if (url == '/css/articles-style.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(articlesStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(articlesStyle).pipe(res);
+        }
     }
     else if (url == '/css/normalize.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(normalizeStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(normalizeStyle).pipe(res);
+        }
     }
     else if (url == '/css/platform-game.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(platformStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(platformStyle).pipe(res);
+        }
     }
     else if (url == '/css/portfolio-style.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(portfolioStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(portfolioStyle).pipe(res);
+        }
     }
     else if (url == '/css/red-knight.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(redKnightStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(redKnightStyle).pipe(res);
+        }
     }
     else if (url == '/css/smup.css') {
-        res.writeHead(200, { 'content-type': 'text/css' });
-        res.write(smupStyle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/css' });
+            fs.createReadStream(smupStyle).pipe(res);
+        }
     }
     else if (url == '/font/zero-hour.otf') {
-        res.writeHead(200, { 'content-type': 'text/otf' });
-        res.write(zeroHourFont);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/otf' });
+            fs.createReadStream(zeroHourFont).pipe(res);
+        }
     }
     // image and video request response
     else if (url == '/html/image/capyness.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(homeLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(homeLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/python.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(pythonLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(pythonLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/java.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(javaLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(javaLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/c.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(cLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(cLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/html5.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(htmlLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(htmlLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/css3.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(cssLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(cssLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/javascript.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(jsLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(jsLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/sql.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(sqlLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(sqlLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/nodejs.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(nodeLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(nodeLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/Reactjs.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(reactLogo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(reactLogo).pipe(res);
+        }
     }
     else if (url == '/html/image/text-effect.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(paulImg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(paulImg).pipe(res);
+        }
     }
     else if (url == '/html/video/capy-game-design1.mp4') {
-        res.writeHead(200, { 'content-type': 'video/mp4' });
-        res.write(portfolio1Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'video/mp4' });
+            fs.createReadStream(portfolio1Logo).pipe(res);
+        }
     }
     else if (url == '/html/video/capy-game-design3.mp4') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio2Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio2Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/banking-sys-prototype.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio3Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio3Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/art-gallery-web-app.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio4Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio4Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/banking-sys-python.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio5Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio5Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/red_knight.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio6Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio6Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/game-design1-1.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio7Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio7Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/platform_game.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(portfolio8Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(portfolio8Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/scrum-board.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(article1Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(article1Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/scrum-project-board.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(article2Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(article2Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/chatgpt.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(article3Logo);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(article3Logo).pipe(res);
+        }
     }
     else if (url == '/html/image/paul_kim.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(paulKim);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(paulKim).pipe(res);
+        }
     }
     else if (url == '/html/image/paulkim_resume_2023.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(resume);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(resume).pipe(res);
+        }
     }
     else if (url == '/assets/background.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformBg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformBg).pipe(res);
+        }
     }
     else if (url == '/assets/Idle.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformIdle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformIdle).pipe(res);
+        }
     }
     else if (url == '/assets/IdleLeft.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformIdleLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformIdleLeft).pipe(res);
+        }
     }
     else if (url == '/assets/Jump.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformJump);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformJump).pipe(res);
+        }
     }
     else if (url == '/assets/JumpLeft.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformJumpLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformJumpLeft).pipe(res);
+        }
     }
     else if (url == '/assets/Fall.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformFall);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformFall).pipe(res);
+        }
     }
     else if (url == '/assets/FallLeft.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformFallLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformFallLeft).pipe(res);
+        }
     }
     else if (url == '/assets/Run.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformRun);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformRun).pipe(res);
+        }
     }
     else if (url == '/assets/RunLeft.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformRunLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformRunLeft).pipe(res);
+        }
     }
     else if (url == '/assets/Dash1.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformDash);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformDash).pipe(res);
+        }
     }
     else if (url == '/assets/DashLeft1.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformDashLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformDashLeft).pipe(res);
+        }
     }
     else if (url == '/assets/Attack1.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformAttack1);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformAttack1).pipe(res);
+        }
     }
     else if (url == '/assets/Attack2.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformAttack2);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformAttack2).pipe(res);
+        }
     }
     else if (url == '/assets/AttackLeft.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformAttack1Left);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformAttack1Left).pipe(res);
+        }
     }
     else if (url == '/assets/AttackLeft2.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(platformAttack2Left);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(platformAttack2Left).pipe(res);
+        }
     }
     else if (url == '/assets/background_image2.jpeg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupBg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupBg).pipe(res);
+        }
     }
     else if (url == '/assets/spaceship.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupPlayer);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupPlayer).pipe(res);
+        }
     }
     else if (url == '/assets/red_enemy.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupRedEnemy);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupRedEnemy).pipe(res);
+        }
     }
     else if (url == '/assets/red_enemy2.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupRedEnemy2);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupRedEnemy2).pipe(res);
+        }
     }
     else if (url == '/assets/blue_enemy.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupBlueEnemy);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupBlueEnemy).pipe(res);
+        }
     }
     else if (url == '/assets/blue_enemy2.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupBlueEnemy2);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupBlueEnemy2).pipe(res);
+        }
     }
     else if (url == '/assets/bullet.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(smupPlayerBullet);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(smupPlayerBullet).pipe(res);
+        }
     }
     else if (url == '/assets/tiled/background.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgBg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgBg).pipe(res);
+        }
     }
     else if (url == '/assets/tiled/foreground.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgFg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgFg);
+        }
     }
     else if (url == '/assets/player/down/down_all.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayer);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayer).pipe(res);
+        }
     }
     else if (url == '/assets/player/left/left_all.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayerLeft);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayerLeft).pipe(res);
+        }
     }
     else if (url == '/assets/player/up/up_all.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayerUp);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayerUp).pipe(res);
+        }
     }
     else if (url == '/assets/player/right/right_all.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayerRight);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayerRight).pipe(res);
+        }
     }
     else if (url == '/assets/battle_background.jpg') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgBattleBg);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgBattleBg).pipe(res);
+        }
     }
     else if (url == '/assets/monster/mushroom2.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgMonster);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgMonster).pipe(res);
+        }
     }
     else if (url == '/assets/player/right/right_0.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayerBattle);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayerBattle).pipe(res);
+        }
     }
     else if (url == '/assets/player/right_attack/attack_right.png') {
-        res.writeHead(200, { 'content-type': 'image/jpg' });
-        res.write(rpgPlayerSlash);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/jpg' });
+            fs.createReadStream(rpgPlayerSlash).pipe(res);
+        }
     }
     else if (url == '/html/site.webmanifest') {
-        res.writeHead(200, { 'content-type': 'text/json' });
-        res.write(siteManifest);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/json' });
+            fs.createReadStream(siteManifest).pipe(res);
+        }
     }
     else if (url == '/html/favicon-32x32.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(faviconBig);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(faviconBig).pipe(res);
+        }
     }
     else if (url == '/html/favicon-16x16.png') {
-        res.writeHead(200, { 'content-type': 'image/png' });
-        res.write(faviconSmall);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'image/png' });
+            fs.createReadStream(faviconSmall).pipe(res);
+        }
     }
     // logic request response
     else if (url == '/script/menu.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(homeLogic);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(homeLogic).pipe(res);
+        }
     }
     else if (url == '/script/jquery-3.7.0.min.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(homeLogic2);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(homeLogic2).pipe(res);
+        }
     }
     else if (url == '/script/gsap.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(gsap);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(gsap).pipe(res);
+        }
     }
     else if (url == '/script/platform_game.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(platformLogic);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(platformLogic).pipe(res);
+        }
     }
     else if (url == '/script/red_knight.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(redKnightLogic);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(redKnightLogic).pipe(res);
+        }
     }
     else if (url == '/script/smup.js') {
-        res.writeHead(200, { 'content-type': 'text/javascript' });
-        res.write(smupLogic);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/javascript' });
+            fs.createReadStream(smupLogic).pipe(res);
+        }
     }
     // pages request response
     else if (url == '/html/about/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(aboutPage);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(aboutPage).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolioPage);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolioPage).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio8.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio8Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio8Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio7.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio7Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio7Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio6.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio6Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio6Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio5.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio5Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio5Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio4.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio4Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio4Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio3.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio3Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio3Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio2.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio2Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio2Page).pipe(res);
+        }
     }
     else if (url == '/html/portfolio/portfolio1.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(portfolio1Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(portfolio1Page).pipe(res);
+        }
     }
     else if (url == '/html/articles/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(articlesPage);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(articlesPage).pipe(res);
+        }
     }
     else if (url == '/html/articles/article1.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(article1Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(article1Page).pipe(res);
+        }
     }
     else if (url == '/html/articles/article2.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(article2Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(article2Page).pipe(res);
+        }
     }
     else if (url == '/html/articles/article3.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(article3Page);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(article3Page);
+        }
     }
     else if (url == '/html/resume/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(resumePage);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(resumePage).pipe(res);
+        }
     }
     else if (url == '/html/contact/index.html') {
-        res.writeHead(200, { 'content-type': 'text/html' });
-        res.write(contactPage);
-        res.end();
+        if (req.method === "GET") {
+            res.writeHead(200, { 'content-type': 'text/html' });
+            fs.createReadStream(contactPage).pipe(res);
+        }
     }
     else {
         res.writeHead(404, { 'content-type': 'text/html' });
-        res.write('<h1>404 Error - Page not Found</h1>')
-        res.end();
+        res.write('<h1>404 Error - Page not Found</h1>');
+        res.end()
     }
 })
 
-server.listen(5000);
+server.listen(port, () => {
+    console.log(`Server listening on port: ${port}`)
+});
 
 
 
