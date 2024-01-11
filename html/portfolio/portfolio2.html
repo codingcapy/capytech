@@ -12,6 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
     <script src="../../script/menu.js" defer="defer"></script>
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
@@ -24,25 +25,29 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="top-bar">
-                <a href="../../html/index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
-                        id="capytech-icon"></a>
-                <button id="hamburger-menu" class="hamburger-menu">&#127828;</button>
+    <div class="flex flex-col min-h-screen mx-auto px-1 py-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="./index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
             </div>
             <nav id="main-nav">
-                <ul id="nav-ul">
-                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../resume/index.html">Resume</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                <ul class="md:flex">
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/index.html">Home</a></li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/contact/index.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-
         <main>
 
             <div id="portfolio-main">

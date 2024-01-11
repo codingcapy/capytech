@@ -8,12 +8,13 @@
 -->
 
 <head>
-    <title>Capytech | Articles</title>
+    <title>Paul Kim | Blogs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
     <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -24,57 +25,64 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="top-bar">
-                <a href="../../html/index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
-                        id="capytech-icon"></a>
-                <button id="hamburger-menu" class="hamburger-menu">&#127828;</button>
+    <div class="flex flex-col min-h-screen mx-auto px-1 py-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="./index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
             </div>
             <nav id="main-nav">
-                <ul id="nav-ul">
-                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../resume/index.html">Resume</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                <ul class="md:flex">
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/index.html">Home</a></li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/contact/index.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-
-        <main>
-            <div id="articles-main">
-                <h1>CapyTech Articles</h1>
+        <main class="flex-1">
+            <div class=" py-2 max-w-6xl mx-auto">
                 <article>
-                    <h2>ChatGPT</h2>
+                    <h2 class="text-4xl text-center py-10">ChatGPT</h2>
                     <img src="../image/chatgpt.jpg" alt="ChatGPT" class="scrum-img">
-                    <p>Posted on: April 12, 2023</p>
-                    <p>I'm going to start by being honest and declaring that I do use chatGPT's or its variants's
-                        help on a regular basis when I develop software (I'm going to refer to all versions of
+                    <p class="py-2">Posted on: April 12, 2023</p>
+                    <p class="py-2">I'm going to start by being honest and declaring that I do use chatGPT's or its
+                        variants's
+                        help occasionally when I develop software (I'm going to refer to all versions of
                         OpenAI's machine learning chat software as chatGPT going forward for simplicity).</p>
-                    <p>In fact, it's almost foolish to refuse using such a useful tool when it is at your
+                    <p class="py-2">In fact, one should be inclined to use such a useful tool when it is at your
                         disposal. Asking it to build an entire software at its current state and performance is
-                        unfeasible; however, asking it for a solution to a complex feature implementation or
-                        squashing of a tricky bug can sometimes help. ChatGPT saves time and energy for all
-                        developers.
+                        unfeasible; however, it can help fix snippets of code that are seemingly broken, thereby
+                        allowing developers to paste in code so that chatGPT can either fix it or suggest a better or
+                        alternate solution.
                     </p>
-                    <p>Ontop of that, some the solutions that it provides are clever and efficient;
+                    <p class="py-2">Ontop of that, some the solutions that it provides are clever and efficient;
                         studying these solutions elevates the developer's knowledge and skill as we become able to
                         implement the same technique in similar situations in the future.
                         Other times, it fails to provide code that completely solves a particular issue despite
                         providing it with high context, but its solution or snippets of its code can assist in
                         implementing a feature or fixing a bug.</p>
-                    <p>OpenAI's chat software is rocking the world. Tech giants are shaken by its presence and
+                    <p class="py-2">OpenAI's chat software is rocking the world. Tech giants are shaken by its presence
+                        and
                         are scrambling to develop a competing or superior product at the risk of becoming engulfed
                         by it over time. The race has begun.</p>
-                    <p>In fact, tech giants are not the only ones troubled by the software; along with the rest of
+                    <p class="py-2">In fact, tech giants are not the only ones troubled by the software; along with the
+                        rest of
                         the tech population (as well as people in other industries), I am worried about its capacity
                         to replace my current growing field of expertise.</p>
-                    <p>Given the current state of the tech industry, it seems that this chat software only
+                    <p class="py-2">Given the current state of the tech industry, it seems that this chat software only
                         exacerbates the probability of someone successfully obtaining or keeping employment in the
                         tech industry.</p>
-                    <p>At this point, I can only think of one solution: continute to learn and grow our expertise
+                    <p class="py-2">At this point, I can only think of one solution: continute to learn and grow our
+                        expertise
                         and knowledge. The chat software's ability to learn will inevitably surpass the rate at
                         which us humans amass knowledge and experience. But the fact that we are facing a losing
                         race does not justify forfeiting it and complaining about the state of the world; the onset
@@ -83,26 +91,24 @@
                 </article>
             </div>
         </main>
-        <footer>
-            <div id="footer-wrapper1">
-                <div id="footer-contact">
-                    <h2>Contact</h2>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
                     <ul>
                         <li>T: +1 (778) 994-4939</li>
                         <li>E: spkim0921@gmail.com</li>
                     </ul>
                 </div>
-                <div id="footer-location">
-                    <h2>Location</h2>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
                     <ul>
                         <li>North Vancouver, BC</li>
                         <li>Canada</li>
                     </ul>
                 </div>
             </div>
-            <div id="copyright">
-                <p>Copyright&copy; 2022 Capytech. All rights reserved.</p>
-            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
         </footer>
     </div>
 </body>

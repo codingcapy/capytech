@@ -8,12 +8,13 @@
 -->
 
 <head>
-    <title>Capytech | Articles</title>
+    <title>Paul Kim | Blogs</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
     <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -24,42 +25,85 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="top-bar">
-                <a href="../../html/index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
-                        id="capytech-icon"></a>
-                <button id="hamburger-menu" class="hamburger-menu">&#127828;</button>
+    <div class="flex flex-col min-h-screen mx-auto px-1 py-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="./index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
             </div>
             <nav id="main-nav">
-                <ul id="nav-ul">
-                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../resume/index.html">Resume</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                <ul class="md:flex">
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/index.html">Home</a></li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li class="px-5 py-3 text-center  md:block"><a href="../../html/contact/index.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
-
-        <main>
-            <div id="articles-main">
-                <h1>CapyTech Articles</h1>
+        <main class="flex-1">
+            <div class=" py-2 max-w-6xl mx-auto">
                 <article>
-                    <h2>OOP, Procedural Programming, Functional Programming</h2>
-                    <img src="../image/programming-languages.JPG" alt="Programming Languages" class="scrum-img">
-                    <p>Posted on: August 7, 2023</p>
-                    <p>It seems every ex-Google ex-Facebook ex-[insert FAANG name] tech influencer on social media has their own video on how to become a software developer nowadays. And each of them tell you to learn different languages in different order. Confusing much?</p>
-                    <p>I understand the reasoning behind them - skills required for software development varies greatly depending on the type of development you want to do. OOP languages might be the way for a certain application, while front-end web development with React will get you to use functional programming a lot more. Embedded systems, on the other hand, may require you to use procedural programming more often than not. But for a beginner, all this is confusing as hell.</p>
-                    <p>As if this chaos on the self-taught programmer journey wasn't enough, it's only ever-so-slightly better in academia. At British Columbia Institute of Technology, you're pretty much free to learn almost any language or material in any order after Python and Java. Initially, you're taught the fundamentals of programming in Python and Object-Oriented Programming in Java - which makes sense, because Python is easy on the beginner with its simple, dynamically written, highly abstracted syntax, and Java is the language that will get you familiar with statically typed object-oriented programming. But those are pre-requisites that unlock a massive number of courses, and you're left to navigate in any direction you choose, and hopefully you're on the right track.</p>
-                    <p>Thankfully, if you follow specific programs such as Applied Software Development or the Computer Systems Certificate, your studies remain more structured - you continue on from Java to learn procedural programming with C, where they also introduce data structures and algorithms. But you need to take a separate course on algorithm analysis and design in order to study concepts such as time and space complexity at a deeper level. C is a pre-req to C++.</p>
-                    <p>Depending on the program, you also get to learn fundamentals of web development with HTML5, CSS3, JavaScript ES06 and relational databases with SQL, giving you a well-rounded range of knowledge. If you so wish, as have I, you can extend into back-end web development with Node.js and front-end web development with React.js, where you will learn functional and event-driven programming.</p>
-                    <p>I personally have not had the experience of taking any programs or courses at other universities or colleges, but from what I heard from a number of CS students who transfered to BCIT, they are apparently excessively heavy on theory and severely lacking in practical skill acquisition, including actually coding in programming languages and developing applications.</p>
-                    <h3>From Programming to Design to Optimization</h3>
-                    <p>Personally, if I were to travel back in time and learn from scratch, I would order the learning in a slightly different way. It is my belief that you should first learn how to code, then learn to design - both front and back-end, then optimize your code. ThePrimeagen constantly tells us to build an application, then re-build it from scratch, and I think he has a very good point. It's not too late to learn the concepts and theory after you've had your hands on coding, because concepts and theory will make you a better coder once you know it.</p>
-                    <p>Recently a friend of mine asked where they should start in order to learn programming. And this is the chronological order of materials I recommended him to study in:</p>
-                    <ol>
+                    <h2 class="text-4xl text-center py-10">OOP, Procedural Programming, Functional Programming</h2>
+                    <img src="../image/programming-languages.JPG" alt="Programming Languages"
+                        class="md:max-w-md mx-auto">
+                    <p class="py-2">Posted on: August 7, 2023</p>
+                    <p class="py-2">It seems every ex-Google ex-Facebook ex-[insert FAANG name] tech influencer on
+                        social media has
+                        their own video on how to become a software developer nowadays. And each of them tell you to
+                        learn different languages in different order. Confusing much?</p>
+                    <p class="py-2">I understand the reasoning behind them - skills required for software development
+                        varies greatly
+                        depending on the type of development you want to do. OOP languages might be the way for a
+                        certain application, while front-end web development with React will get you to use functional
+                        programming a lot more. Embedded systems, on the other hand, may require you to use procedural
+                        programming more often than not. But for a beginner, all this is confusing as hell.</p>
+                    <p class="py-2">As if this chaos on the self-taught programmer journey wasn't enough, it's only
+                        ever-so-slightly
+                        better in academia. At British Columbia Institute of Technology, you're pretty much free to
+                        learn almost any language or material in any order after Python and Java. Initially, you're
+                        taught the fundamentals of programming in Python and Object-Oriented Programming in Java - which
+                        makes sense, because Python is easy on the beginner with its simple, dynamically written, highly
+                        abstracted syntax, and Java is the language that will get you familiar with statically typed
+                        object-oriented programming. But those are pre-requisites that unlock a massive number of
+                        courses, and you're left to navigate in any direction you choose, and hopefully you're on the
+                        right track.</p>
+                    <p class="py-2">Thankfully, if you follow specific programs such as Applied Software Development or
+                        the Computer
+                        Systems Certificate, your studies remain more structured - you continue on from Java to learn
+                        procedural programming with C, where they also introduce data structures and algorithms. But you
+                        need to take a separate course on algorithm analysis and design in order to study concepts such
+                        as time and space complexity at a deeper level. C is a pre-req to C++.</p>
+                    <p class="py-2">Depending on the program, you also get to learn fundamentals of web development with
+                        HTML5, CSS3,
+                        JavaScript ES06 and relational databases with SQL, giving you a well-rounded range of knowledge.
+                        If you so wish, as have I, you can extend into back-end web development with Node.js and
+                        front-end web development with React.js, where you will learn functional and event-driven
+                        programming.</p>
+                    <p class="py-2">I personally have not had the experience of taking any programs or courses at other
+                        universities
+                        or colleges, but from what I heard from a number of CS students who transfered to BCIT, they are
+                        apparently excessively heavy on theory and severely lacking in practical skill acquisition,
+                        including actually coding in programming languages and developing applications.</p>
+                    <h3 class="text-xl text-teal-300">From Programming to Design to Optimization</h3>
+                    <p class="py-2">Personally, if I were to travel back in time and learn from scratch, I would order
+                        the learning
+                        in a slightly different way. It is my belief that you should first learn how to code, then learn
+                        to design - both front and back-end, then optimize your code. ThePrimeagen constantly tells us
+                        to build an application, then re-build it from scratch, and I think he has a very good point.
+                        It's not too late to learn the concepts and theory after you've had your hands on coding,
+                        because concepts and theory will make you a better coder once you know it.</p>
+                    <p class="py-2">Recently a friend of mine asked where they should start in order to learn
+                        programming. And this
+                        is the chronological order of materials I recommended him to study in:</p>
+                    <ol class="py-2">
                         <li>Programming Fundamentals with Python</li>
                         <li>Introduction to Web Development with HTML5 and CSS3</li>
                         <li>Object-Oriented Programming with Java</li>
@@ -74,31 +118,50 @@
                         <li>Algorithm Analysis and Design</li>
                         <li>Application Development with C++</li>
                     </ol>
-                    <p>I told him to start with Python so as not to overwhelm him with the syntax of statically-typed and lower-abstraction languages, and HTML and CSS to discover the fun of developing static pages. Java is an excellent introduction to OOP, and will help him familiarize with the JS syntax, as they are similar - although vastly different in the way they work under the hood. Database design will help him understand the importance of keys and normal forms when creating objects, arrays, maps and databases. Agile will familiarize him with modern project management trends like ceremonies, sprints, reviews and retrospectives and user stories, and UI/UX development will attune him to user-focused development and efficient layouts and patterns/anti-patterns, as well as accessibility features. Procedural programming with C will expose him to close-to-the-metal, lower-level programming, pointers, bit and memory manipulation, binary trees, data structures, recursion, and code optimization. Node and React will allow him to learn some of the most popular frameworks currently in web development and introduce him to functional programming, components and states, single-threaded async operations, callbacks, npm, modules, promises and streams.</p>
-                    <p>You may or may not agree with my recommended order, and that's OK. We all have different ways of learning, and for me, this would be a steady-paced progression in skill-acquisition and difficulty. My highest priority was to prevent my friend from quitting as much as possible, as I know how overwhelming it can feel in the beginning. That list is in no way exhaustive, and barely scratches the surface of the enormity that is the field of computer science. But I believe it will build a strong foundation for building and designing real-world applications.</p>
+                    <p class="py-2">I told him to start with Python so as not to overwhelm him with the syntax of
+                        statically-typed
+                        and lower-abstraction languages, and HTML and CSS to discover the fun of developing static
+                        pages. Java is an excellent introduction to OOP, and will help him familiarize with the JS
+                        syntax, as they are similar - although vastly different in the way they work under the hood.
+                        Database design will help him understand the importance of keys and normal forms when creating
+                        objects, arrays, maps and databases. Agile will familiarize him with modern project management
+                        trends like ceremonies, sprints, reviews and retrospectives and user stories, and UI/UX
+                        development will attune him to user-focused development and efficient layouts and
+                        patterns/anti-patterns, as well as accessibility features. Procedural programming with C will
+                        expose him to close-to-the-metal, lower-level programming, pointers, bit and memory
+                        manipulation, binary trees, data structures, recursion, and code optimization. Node and React
+                        will allow him to learn some of the most popular frameworks currently in web development and
+                        introduce him to functional programming, components and states, single-threaded async
+                        operations, callbacks, npm, modules, promises and streams.</p>
+                    <p class="py-2">You may or may not agree with my recommended order, and that's OK. We all have
+                        different ways of
+                        learning, and for me, this would be a steady-paced progression in skill-acquisition and
+                        difficulty. My highest priority was to prevent my friend from quitting as much as possible, as I
+                        know how overwhelming it can feel in the beginning. That list is in no way exhaustive, and
+                        barely scratches the surface of the enormity that is the field of computer science. But I
+                        believe it will build a strong foundation for building and designing real-world applications.
+                    </p>
                 </article>
             </div>
         </main>
-        <footer>
-            <div id="footer-wrapper1">
-                <div id="footer-contact">
-                    <h2>Contact</h2>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
                     <ul>
                         <li>T: +1 (778) 994-4939</li>
                         <li>E: spkim0921@gmail.com</li>
                     </ul>
                 </div>
-                <div id="footer-location">
-                    <h2>Location</h2>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
                     <ul>
                         <li>North Vancouver, BC</li>
                         <li>Canada</li>
                     </ul>
                 </div>
             </div>
-            <div id="copyright">
-                <p>Copyright&copy; 2022 Capytech. All rights reserved.</p>
-            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
         </footer>
     </div>
 </body>
