@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
     <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -24,142 +25,157 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="top-bar">
-                <a href="../../html/index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
-                        id="capytech-icon"></a>
-                <button id="hamburger-menu" class="hamburger-menu">&#127828;</button>
+    <div class="flex flex-col min-h-screen mx-auto px-1 py-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="./index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
             </div>
-            <nav id="main-nav">
-                <ul id="nav-ul">
-                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../resume/index.html">Resume</a></li>
-                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+            <nav>
+                <ul class="md:flex">
+                    <li class="px-5 py-3 text-center hidden md:block"><a href="../../html/index.html">Home</a></li>
+                    <li class="px-5 py-3 text-center hidden md:block"><a
+                            href="../../html/portfolio/index.html">Portfolio</a></li>
+                    <li class="px-5 py-3 text-center hidden md:block"><a
+                            href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li class="px-5 py-3 text-center hidden md:block"><a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li class="px-5 py-3 text-center hidden md:block"><a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li class="px-5 py-3 text-center hidden md:block"><a
+                            href="../../html/contact/index.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <div id="portfolio-main">
-                <h1>Capytech Portfolio</h1>
-                <h2>Current Projects</h2>
+        <main class="flex-1">
+            <div class=" py-2 max-w-6xl mx-auto">
+                <h2 class="text-4xl text-center py-10">Current Projects</h2>
                 <div id="current-projects-section">
-                    <article>
-                        <a href="https://codingcapy.github.io/cocodogo-client/" target="_blank">
+                    <article class="py-2">
+                        <a href="https://codingcapy.github.io/cocodogo-client/" target="_blank" class="md:flex">
                             <figure>
-                                <img src="../image/capysocial.jpg" alt="Banking System Prototype II" class="portfolio-img">
+                                <img src="../image/capysocial.jpg" alt="Banking System Prototype II"
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>Full Stack Web App</h3>
-                                <p>This project is a full-stack web app written in Node Express, React Vite and MongoDB that uses json web
-                                    token user authentication and allows users to post, comment, reply, and vote similar to
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">Full Stack Web App</h3>
+                                <p class="text-gray-400">This project is a full-stack web app written in Node Express,
+                                    React Vite and MongoDB
+                                    that uses json web
+                                    token user authentication and allows users to post, comment, reply, and vote similar
+                                    to
                                     forums like Reddit.</p>
+                                <p>Stack: Node, Express, React, Vite, MongoDB, Railway</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="https://codingcapy.github.io/capytech-react">
+                    <article class="py-2">
+                        <a href="https://codingcapy.github.io/capytech-react" class="md:flex">
                             <figure>
                                 <img src="../image/react-project.jpg" alt="Banking System Prototype II"
-                                    class="portfolio-img">
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>React Front End Web Project</h3>
-                                <p>This project is a website written entirely in React that simulates the front end of
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">React Front End Web Project</h3>
+                                <p class="text-gray-400">This project is a website written entirely in React that
+                                    simulates the front end of
                                     Youtube.</p>
+                                <p>Stack: Node, Express, React, Vite, MongoDB, Render</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio6.html">
+                    <article class="py-2">
+                        <a href="./portfolio6.html" class="md:flex">
                             <figure>
                                 <img src="../image/red_knight.jpg" alt="Banking System Prototype II"
-                                    class="portfolio-img">
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>JavaScript RPG</h3>
-                                <p>Click here to play! This project is a JavaScript RPG game I recently completed.</p>
-
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">JavaScript RPG</h3>
+                                <p class="text-gray-400">Click here to play! This project is a JavaScript RPG game I
+                                    recently completed.</p>
+                                <p>Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio7.html">
+                    <article class="py-2">
+                        <a href="./portfolio7.html" class="md:flex">
                             <figure>
                                 <img src="../image/game-design1-1.jpg" alt="Banking System Prototype II"
-                                    class="portfolio-img">
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>JavaScript Smup</h3>
-                                <p>Click here to play! This project is a JavaScript RPG game I recently completed.</p>
-
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">JavaScript Smup</h3>
+                                <p class="text-gray-400">Click here to play! This project is a JavaScript RPG game I
+                                    recently completed.</p>
+                                <p>Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio8.html">
+                    <article class="py-2">
+                        <a href="./portfolio8.html" class="md:flex">
                             <figure>
                                 <img src="../image/platform_game.jpg" alt="Banking System Prototype II"
-                                    class="portfolio-img">
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>JavaScript Platform</h3>
-                                <p>Click here to play! This project is a JavaScript platform game I recently completed.
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">JavaScript Platform</h3>
+                                <p class="text-gray-400">Click here to play! This project is a JavaScript platform game
+                                    I recently completed.
                                 </p>
+                                <p>Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio2.html">
+                    <article class="py-2">
+                        <a href="./portfolio2.html" class="md:flex">
                             <figure>
                                 <img src="../image/art-gallery-web-app.jpg" alt="Art Gallery Web App"
-                                    class="portfolio-img">
-
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>Art Gallery Web App</h3>
-                                <p>This is a web app I developed for a talented artist who wanted her customers to be
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">Art Gallery Web App</h3>
+                                <p class="text-gray-400">This is a web app I developed for a talented artist who wanted
+                                    her customers to be
                                     able to browse
                                     her
                                     shop at conventions without necessarily having to wait near her booth physically to
                                     look at her
                                     products.</p>
+                                <p>Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio3.html">
+                    <article class="py-2">
+                        <a href="./portfolio3.html" class="md:flex">
                             <figure>
                                 <img src="../image/banking-sys-prototype.jpg" alt="Banking System Prototype"
-                                    class="portfolio-img">
+                                    class="md:max-w-60">
                             </figure>
-                            <figcaption>
-                                <h3>Banking System Prototype</h3>
-                                <p>Having worked for a financial institution for the past 7 years, I have decided to
+                            <figcaption class="md:pl-10">
+                                <h3 class="text-xl text-teal-300">Banking System Prototype</h3>
+                                <p class="text-gray-400">Having worked for a financial institution for the past 7 years,
+                                    I have decided to
                                     make a personal
                                     project of building a banking system prototype that also functions as a CRM.</p>
                             </figcaption>
                         </a>
                     </article>
                 </div>
-                <h2>GameProjects</h2>
-                <p>The following are game dev projects I have worked on by myself (I never consider them 100%
-                    finished,
-                    the more time and effort put into a project, the better it gets) <br> Therefore I always call them
-                    prototypes until they are actually shipped or in beta-test phase</p>
-                <h3>Game Projects using Python Pygame Library</h3>
+                <h2 class="text-4xl text-center py-10">GameProjects</h2>
+                <p>The following are game dev projects I have worked on by myself
                 <div id="pygames-section">
-                    <article>
-                        <a href="./portfolio4.html">
+                    <article class="py-2">
+                        <a href="./portfolio4.html" class="md:flex">
                             <figure>
-                                <video src="../video/capy-game-design3.mp4" controls class="video"></video>
+                                <video src="../video/capy-game-design3.mp4" controls class="md:max-w-60"></video>
                             </figure>
-                            <figcaption>
-                                <h4>2D ARPG Project</h4>
+                            <figcaption class="md:pl-10">
+                                <h4 class="text-xl text-teal-300">2D ARPG Project</h4>
                                 <p>This is actually my third game development project, all written in Python and using
                                     the pygame
                                     library. This project taught me animations, screen scrolling, and tile generation.
@@ -169,13 +185,13 @@
                             </figcaption>
                         </a>
                     </article>
-                    <article>
-                        <a href="./portfolio5.html">
+                    <article class="py-2">
+                        <a href="./portfolio5.html" class="md:flex">
                             <figure>
-                                <video src="../video/capy-game-design1.mp4" controls class="video"></video>
+                                <video src="../video/capy-game-design1.mp4" controls class="md:max-w-60"></video>
                             </figure>
-                            <figcaption>
-                                <h4>2D Shoot'em-up Project</h4>
+                            <figcaption class="md:pl-10">
+                                <h4 class="text-xl text-teal-300">2D Shoot'em-up Project</h4>
                                 <p>This is my second game development project, fully written in Python and using the
                                     pygame library. I learned to procedurally generate enemies through this project. I
                                     am considering adding more features such as loot drops, upgrades, and boss addition
@@ -186,26 +202,24 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <div id="footer-wrapper1">
-                <div id="footer-contact">
-                    <h2>Contact</h2>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
                     <ul>
                         <li>T: +1 (778) 994-4939</li>
                         <li>E: spkim0921@gmail.com</li>
                     </ul>
                 </div>
-                <div id="footer-location">
-                    <h2>Location</h2>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
                     <ul>
                         <li>North Vancouver, BC</li>
                         <li>Canada</li>
                     </ul>
                 </div>
             </div>
-            <div id="copyright">
-                <p>Copyright&copy; 2023 Capytech. All rights reserved.</p>
-            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
         </footer>
     </div>
 </body>

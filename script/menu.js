@@ -6,7 +6,7 @@ vector menu.
 - it will detect if the user clicks on the button class="btn-menu"
 - each click will toggle ON and OFF the class="show", between these two states:
    <nav class="show">
-    OR
+	OR
    <nav>
 - css style will take care of what to do with class="show"
 
@@ -14,12 +14,14 @@ More on JavaScript in a future lesson
 */
 
 
-(function(d){
-	
-	const $nav = d.querySelector('nav');
-	const $btn = d.querySelector('.hamburger-menu');	
-	$btn.addEventListener('click', function(){		
-		$nav.classList.toggle('show');		
-	});	
-	
-})(document);
+const $mainNav = $('#main-nav');
+const hamburgerMenu = document.getElementById('hamburger-menu');
+
+$mainNav.hide();
+if (window.innerWidth > 700) {
+	$mainNav.show();
+}
+
+hamburgerMenu.addEventListener('click', function () {
+	$mainNav.slideToggle();
+})

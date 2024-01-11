@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<!--
+    author: Paul Kim
+    date: October 5, 2022
+    version: 1.0
+    notes: Capytech articles page
+-->
+
+<head>
+    <title>Capytech | Articles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
+    <script src="../../script/menu.js" defer="defer"></script>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="top-bar">
+                <a href="../../html/index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        id="capytech-icon"></a>
+                <button id="hamburger-menu" class="hamburger-menu">&#127828;</button>
+            </div>
+            <nav id="main-nav">
+                <ul id="nav-ul">
+                    <li class="nav-li"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../portfolio/index.html">Portfolio</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../articles/index.html">Articles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../about/index.html">About</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../resume/index.html">Resume</a></li>
+                    <li class="nav-li"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="articles-main">
+                <article>
+                    <h2>Frameworks, Modules and Packages</h2>
+                    <img src="../image/scrum-project-board.jpg" alt="Scrum Project Board" class="scrum-img">
+                    <p>Posted on: January 10, 2024</p>
+                    <p>There's a lot of conflicting opinions among engineers about the use of frameworks, modules and
+                        libraries.</p>
+                    <p>The main arguments of those on the opposing camp raise concerns over bloating the web and
+                        unnecessarily complicating things that don't need to be complicated. Although they have a point,
+                        there's a reason frameworks and modules like React, Next, Remix, Angular, Vue, Tailwind, Express
+                        and Bun
+                        have taken over the web development industry.</p>
+                    <p>I recently returned to using vanilla HTML, CSS and JS after several months of using React, Node,
+                        Express, Tailwind and Next. And to be honest, it didn't feel too bad; I just had to work on html
+                        tags instead of jsx and tsx, and had to implement logic and axios api calls using javascript
+                        instead of inside my
+                        jsx and tsx. I did get bothered by having to use vanilla css and scss, so I just converted my
+                        styling into tailwind.</p>
+                    <p>Development environment aside, I knew from the get-go that my vanilla project would have
+                        advantages over my MERN apps with regards to SEO and rendering speed.</p>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-wrapper1">
+                <div id="footer-contact">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>T: +1 (778) 994-4939</li>
+                        <li>E: spkim0921@gmail.com</li>
+                    </ul>
+                </div>
+                <div id="footer-location">
+                    <h2>Location</h2>
+                    <ul>
+                        <li>North Vancouver, BC</li>
+                        <li>Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>Copyright&copy; 2022 Capytech. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
