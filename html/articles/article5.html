@@ -91,8 +91,8 @@
                         it took me 3
                         times longer developping
                         in vanilla than when I
-                        was using these frameworks and reusable components, while adding logic to my jsx without having
-                        to toggle back and forth between my html and javascript. There's definitely a convenience factor
+                        was using reusable components and adding logic to my jsx without having
+                        to toggle back and forth between my html and javascript files. There's definitely a convenience factor
                         there, and it triples development speed.</p>
                     <h2 class="text-xl pt-2 text-teal-300">A question of performance?</h2>
                     <p class="py-2">Development environment aside, I was convinced that my vanilla project would have
@@ -100,11 +100,11 @@
                         site and began navigating through its pages, the rendering took LONGER than my SPA apps most of
                         the time
                         because I was essentially sending a GET request for an entirely new page to be rendered on my
-                        browser at every navigation link anchor.</p>
-                    <p class="py-2">With regards to SEO, Next's SSR and replication of the file-based system of
+                        browser at every navigation link anchor instead of swapping components.</p>
+                    <p class="py-2">With regards to SEO, Next's SSR and router system replicating the file-based system of
                         navigation takes care
-                        of what lacks in the issue with React's initially empty html and client side having to fetch the
-                        massive js bundle build and render every single component on the browser. The only gripe I have
+                        of React's issue of initially empty html and client side having to fetch the
+                        massive js bundle build and render every single component on the browser, making the search engine miss the content of the html. The only gripe I have
                         with Next is its
                         relentless attempt at trying to hide server request and response in the name of "serverless",
                         complicating things with auth and user state, but that's another story for another time.</p>
@@ -113,7 +113,7 @@
                     <h2 class="text-xl pt-2 text-teal-300">Abstractions, abstractions, abstractions</h2>
                     <p class="py-2">So it seems at this point that frameworks and modules add development convenience
                         and even
-                        performance improvements at some level in exchange for "bloating the web". But there is also
+                        performance improvements to some extent in exchange for "bloating the web". But there is also
                         another issue: abstraction levels. With all the magic going on under the hood, the risk of the
                         developer running into a fatal bug and not being able to find a solution goes up. Eventually,
                         they may need to dig through the documentation and source code - if available - and may need a
@@ -137,6 +137,7 @@
                         worrying about whether we should learn Rust, Go, Bun, Ruby on Rails, Django, Flask, Springboot,
                         Vue, Angular, React, Next, Nuxt, Tailwind, Redux, Zustand, JWT, Passport, ChartJS, Multer,
                         Busboy, prisma, mongoose...</p>
+                        <p>Or you can just "npm install everything".</p>
                 </article>
             </div>
         </main>
