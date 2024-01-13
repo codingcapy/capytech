@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da524c">
     <meta name="theme-color" content="#ffffff">
 </head>
@@ -67,10 +70,15 @@
 
         <main class="flex-1 max-w-7xl mx-auto">
             <div class=" py-2 md:flex mx-auto">
-                <div class="my-10 pr-10 md:border-r-2 flex-1">
+                <div class="my-10 pr-10  flex-1">
                     <div class="sticky top-20 z-30">
-                        <h1 class=" text-4xl md:text-6xl font-bold primary-font" id="">Hi, I'm <span
-                                class="text-teal-300">Paul</span></h1>
+                        <div class="flex">
+                            <h1 class="flex pr-0 mr-0 text-4xl md:text-6xl font-extrabold primary-font" id="paul">Hi,
+                                I'm
+                                <span class="pl-3 text-teal-300 font-extrabold primary-font">Paul</span>👨🏻‍💻
+                            </h1>
+                            <div class="flex-1"></div>
+                        </div>
                         <h2 class="text-2xl py-2">Full Stack Software Engineer</h2>
                         <p class="py-2 text-gray-400">I am a full stack developer based in Vancouver, British Columbia,
                             Canada. I build modern websites using Express.js, Next.js, React.js, and Node.js.</p>
@@ -119,16 +127,17 @@
                     </p> -->
                     </div>
                 </div>
-                <div class="py-10 md:pl-10 flex-1">
-                    <p class="py-2 text-gray-400">I have recently completed the <strong>Applied Software
+                <div class="py-10 flex-1">
+                    <p class="md:pl-10 md:border-l-2 py-2 text-gray-400">I have recently completed the <strong>Applied
+                            Software
                             Development</strong> and <strong>Applied
                             Web Development</strong> certificates at British
                         Columbia Institute
                         of Technology (BCIT) and currently I am working
                         towards the Applied Computer Information Systems
                         certificate and Computer Systems Diploma concurrently.</p>
-                    <h2 class="text-2xl py-2">My tech stack</h2>
-                    <div class="grid grid-cols-3 py-10 md:gap-3 max-w-md mx-auto">
+                    <h2 class="md:pl-10 md:border-l-2 text-2xl py-2">My tech stack</h2>
+                    <div class="md:pl-10 md:border-l-2 grid grid-cols-3 py-10 md:gap-3 ">
                         <a href="https://www.python.org/" target="_blank"><img src="../html/image/python.png"
                                 alt="Python"
                                 class="mx-auto md:max-w-20 transition-transform ease-in-out duration-300 hover:scale-125"></a>
@@ -161,8 +170,8 @@
                         <a href="https://nextjs.org/" target="_blank"><img src="../html/image/nextjs.jpg" alt="React.js"
                                 class="mx-auto md:max-w-20 transition-transform ease-in-out duration-300 hover:scale-125"></a>
                     </div>
-                    <h2 class="text-2xl py-2">Some things I've built...</h2>
-                    <article class="py-10">
+                    <h2 class="md:pl-10 md: border-l-2 text-2xl py-2">Some things I've built...</h2>
+                    <article class="md:pl-10 md: border-l-2 py-10">
                         <a href="https://codingcapy.github.io/capy-finance-client/" target="_blank" class="md:flex">
                             <figure>
                                 <img src="./image/capyfinance.jpg" alt="Banking System Prototype II"
@@ -177,11 +186,12 @@
                                     that
                                     uses json web
                                     token user authentication and allows users to create financial plans.</p>
-                                <p>Stack: Node, Express, React, ChartJS, Vite, MongoDB, Render</p>
+                                <p class="tertiary-font pt-3">Stack: Node, Express, React, ChartJS, Vite, MongoDB,
+                                    Render</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article class="py-10">
+                    <article class="md:pl-10 md:border-l-2 py-10">
                         <a href="https://codingcapy.github.io/cocodogo-client/" target="_blank" class="md:flex">
                             <figure>
                                 <img src="./image/capysocial.jpg" alt="Banking System Prototype II"
@@ -198,11 +208,11 @@
                                     token user authentication and allows users to post, comment, reply, and vote similar
                                     to
                                     forums like Reddit.</p>
-                                <p>Stack: Node, Express, React, Vite, MongoDB, Railway</p>
+                                <p class="tertiary-font pt-3">Stack: Node, Express, React, Vite, MongoDB, Railway</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article class="py-10">
+                    <article class="md:pl-10 md:border-l-2 py-10">
                         <a href="https://codingcapy.github.io/capytech-react" target="_blank" class="md:flex">
                             <figure>
                                 <img src="./image/react-project.jpg" alt="Banking System Prototype II"
@@ -213,11 +223,11 @@
                                 <p class="text-gray-400">This project is a website written entirely in React that
                                     simulates the front end of
                                     Youtube.</p>
-                                <p>Stack: Node, Express, React, Vite, MongoDB, Render</p>
+                                <p class="tertiary-font pt-3">Stack: Node, Express, React, Vite, MongoDB, Render</p>
                             </figcaption>
                         </a>
                     </article>
-                    <article class="py-10">
+                    <article class="md:pl-10 md:border-l-2 py-10">
                         <a href="./portfolio/portfolio6.html" class="md:flex">
                             <figure>
                                 <img src="./image/red_knight.jpg" alt="Banking System Prototype II"
@@ -227,12 +237,12 @@
                                 <h3 class="text-xl text-teal-300">JavaScript RPG</h3>
                                 <p class="text-gray-400">Click here to play! This project is a JavaScript RPG game I
                                     recently completed.</p>
-                                <p>Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
+                                <p class="tertiary-font pt-3">Stack: HTML5, CSS3, JavaScript ES06, JQuery</p>
                             </figcaption>
                         </a>
                     </article>
-                    <h2 class="text-2xl py-2">Some of my thoughts...</h2>
-                    <div class=" py-2 md:flex max-w-6xl mx-auto">
+                    <h2 class="md:pl-10 md:border-l-2 text-2xl py-2">Some of my thoughts...</h2>
+                    <div class="md:pl-10 md:border-l-2  py-2 md:flex max-w-6xl mx-auto">
                         <section>
                             <article class="py-2">
                                 <figure>
