@@ -9,6 +9,14 @@ notes: Tailwind CSS
 @tailwind components;
 @tailwind utilities;
 
+
+.primary-font {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
 #paul {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
