@@ -24,6 +24,12 @@ $(function () {
             easing: 'ease-in-out',
             duration: 800,
         });
+        sr.reveal('.js--fadeInBottom', {
+            origin: 'bottom',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
     }
     sr.reveal('.js--fadeInLeft', {
         origin: 'left',
