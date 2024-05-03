@@ -9,6 +9,10 @@ notes: Tailwind CSS
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 .primary-font {
     font-family: "Karla", sans-serif;
