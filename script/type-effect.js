@@ -4,7 +4,7 @@
 const intro = document.querySelector(".intro");
 const myName = document.querySelector(".myName");
 const content = 'Hi, I\'m';
-const content2 = 'Paul👨🏻‍💻'
+const content2 = 'Paul🧑💻'
 
 function typingEffect(element, text, i = 0) {
   element.innerHTML += text[i];
