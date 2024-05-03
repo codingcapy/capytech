@@ -9,8 +9,7 @@ notes: Tailwind CSS
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+main {
     overflow-x: hidden;
 }
 
