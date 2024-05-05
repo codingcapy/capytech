@@ -4,7 +4,7 @@
 const intro = document.querySelector(".intro");
 const myName = document.querySelector(".myName");
 const content = 'Hi, I\'m';
-const content2 = 'Paul🧑💻'
+const content2 = 'Paul👦🏻💻'
 
 function typingEffect(element, text, i = 0) {
   element.innerHTML += text[i];
@@ -15,6 +15,6 @@ function typingEffect(element, text, i = 0) {
 }
 
 typingEffect(intro, content);
-setTimeout(()=>typingEffect(myName, content2),1000)
+setTimeout(() => typingEffect(myName, content2), 1000)
 
 
