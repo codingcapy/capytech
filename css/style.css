@@ -53,6 +53,16 @@ main {
 		blink-caret .75s step-end infinite;
 }
 
+.glow:hover {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 0px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
+	transition: all ease-in-out 0.5s;
+}
+
+.glow2:hover{
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 0px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
+	transition: all ease-in-out 0.5s;
+}
+
 @keyframes blink-caret {
 
 	from,
