@@ -10,47 +10,59 @@ notes: Tailwind CSS
 @tailwind utilities;
 
 main {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .primary-font {
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
+	font-family: "Karla", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
 }
 
 .tertiary-font {
-    font-family: 'Lekton', sans-serif;
+	font-family: 'Lekton', sans-serif;
+}
+
+.timeline-img {
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 0%;
+	margin-top: 25px;
+	margin-left: -15px;
 }
 
 #paul {
-    overflow: hidden;
-    border-right: .05em solid orange;
-    white-space: nowrap;
-    animation:
-        typing 2.0s steps(30, end),
-        blink-caret .75s step-end infinite;
+	overflow: hidden;
+	border-right: .05em solid orange;
+	white-space: nowrap;
+	animation:
+		typing 2.0s steps(30, end),
+		blink-caret .75s step-end infinite;
 }
 
-.myName{
-    overflow: hidden;
-    border-right: .05em solid orange;
-    white-space: nowrap;
-    animation:
-        blink-caret .75s step-end infinite;
+.myName {
+	overflow: hidden;
+	border-right: .05em solid orange;
+	white-space: nowrap;
+	animation:
+		blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent
-    }
-    50% {
-        border-color: orange;
-    }
-}
 
+	from,
+	to {
+		border-color: transparent
+	}
+
+	50% {
+		border-color: orange;
+	}
+}
 
 @media(min-width:720px) {
 	body #speedcapture {
