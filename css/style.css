@@ -24,16 +24,17 @@ main {
 	font-family: 'Lekton', sans-serif;
 }
 
-.timeline-img {
+/* .timeline-img {
 	width: 30px;
 	height: 30px;
 	background: white;
 	border-radius: 50%;
-	position: absolute;
-	left: 0%;
+	position: relative;
+	top:-10%;
+	left: -10%;
 	margin-top: 25px;
 	margin-left: -15px;
-}
+} */
 
 #paul {
 	overflow: hidden;
