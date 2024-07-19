@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<!--
+    author: Paul Kim
+    date: October 5, 2022
+    version: 1.0
+    notes: Capytech articles page
+-->
+
+<head>
+    <title>Paul Kim | Articles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
+    <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="flex flex-col min-h-screen mx-auto px-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 px-2 py-2 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="../../index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
+            </div>
+            <nav id="main-nav">
+                <ul class="md:flex">
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/index.html">Home</a></li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/contact/index.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex-1">
+            <div class=" py-2 max-w-6xl mx-auto">
+                <article>
+                    <h2 class="text-4xl text-center py-10">Game Development and MicroTransactions</h2>
+                    <img src="../image/diablo-immortal.jpg" alt="Scrum Project Board" class="scrum-img mx-auto">
+                    <p class="py-2 text-teal-300">Posted on: July 19, 2024</p>
+                    <p class="py-2">Free-to-play but microtransactions. Oh, it's free? Hooray! Let me play! Wait what? I have to pay to unlock/beat this level/player/area? Nah.</p>
+                    <p class="py-2">This is what most players go through nowadays. And I don't just mean mobile. It's crept into PC games too! But not console games as much ... yet</p>
+                    <p class="py-2">Here's how it works. You recruit a bunch of developers, designers, product managers, scrum masters, devops engineers etc etc. You build your game. You tell your staff "This is going to be FTP but with microtransactions!". Immediately, your teams are like "Great. Another one of those". So you spend millions of dollars paying your developers and designers and product managers and ... in fact, everything looks great. The graphics are there, the sound effects are nice, the mechanics are smooth. You launch your game and you get hundreds of thousands of players. But none of them are paying a dime for your content. As they should, because you never asked them to explicitly. They don't owe you anything because that's what your product is. Or, some of them do pay microtransactions because, well, they do. But at the end of the day, what are you left with? Big red numbers with investors and stockholders breathing down your neck. You're gonna shutdown pretty soon.</p>
+                    <p class="py-2">Don't get me wrong, this model has worked for many games in the past. Diablo Immortal (of course I start with the most unfamous one), a bazillion Korean MMOs, League of Legends, whatnot. But people have started to catch on. And they're getting tired of it.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">A Question of Accountability</h2>
+                    <p class="py-2">And there's a reason why. Why do you think Japanese console games are making a killing, while North American FTP MMO games are all crying and dying? People want quality. They want reliable, quality content. And back in the day, that had to be completely established. During the entirety of design and development phase, that was in the back of the mind of every single person involved. This thing makes or breaks depending on how well I do in my job. Not because of chance, not in the hopes of catching those few whales our there. All of us are accountable for the final product, because people are going to pay to experience them.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Fog of uncertainty</h2>
+                    <p class="py-2">Microtransactions are a form of gambling. And so is the development of them. You either make or break. You either attract whales or you dont. But here's the problem: whales usually don't care if the game is well-polished or not. They are geared toward one thing and one thing only: reward and the need to come ahead using money.</p>
+                    <p class="py-2">You can make the most incredible game you want, as soon as you make it free-to-play with microtransactions, its intrinsic value drops to 0. You can hire the most talented developers, engineers, designers, product managers, as soon as you make them "Free To Play", your game is now labelled as worthless unless. Business in itself is a gamble enough. Why add another level of gambling ontop of that? You pay millions toward the most talented developers to ... gamble on your final product?</p>
+                    <p class="py-2">It's time to stop. Microtransactions are a niche. (Most) Games were not, are not, and will not work with this model. Investors and heads of game dev companies need to get this hammered into their heads. This is absurdity at its best. The time for free-to-plau microtransactions is gone! Gamers want quality, reliable experience. WAKE UP.</p>
+                </article>
+            </div>
+        </main>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
+                    <ul>
+                        <li>T: +1 (778) 994-4939</li>
+                        <li>E: spkim0921@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
+                    <ul>
+                        <li>North Vancouver, BC</li>
+                        <li>Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
