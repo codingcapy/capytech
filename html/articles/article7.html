@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<!--
+    author: Paul Kim
+    date: October 5, 2022
+    version: 1.0
+    notes: Capytech articles page
+-->
+
+<head>
+    <title>Paul Kim | Articles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
+    <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="flex flex-col min-h-screen mx-auto px-1 bg-slate-800 text-white">
+        <header class="md:flex bg-slate-800 px-2 py-2 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="../../index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
+            </div>
+            <nav id="main-nav">
+                <ul class="md:flex">
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/index.html">Home</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/contact/index.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex-1">
+            <div class=" py-2 max-w-6xl mx-auto">
+                <article>
+                    <h2 class="text-4xl text-center py-10">The Importance of Projects</h2>
+                    <img src="../image/diablo-immortal.jpg" alt="Scrum Project Board" class="scrum-img mx-auto">
+                    <p class="py-2 text-teal-300">Posted on: November 17, 2024</p>
+                    <p class="py-2">Recently I got hired at a tech startup as a founding software developer.</p>
+                    <p class="py-2">Myself and two others form a team of three full stack devs tasked to build a
+                        generative AI web application from the ground up. Our CEO is a talented and battle-hardened UX
+                        designer who provided us wireframes to build upon. We constructed the
+                        frontend, webserver and database to create a working full stack web app that uses genAI over 9
+                        sprints.
+                    </p>
+                    <p class="py-2">As my team and I got down to business and started drawing flow diagrams and ERDs on
+                        the whiteboard and churned out code, I started to realize something - virtually all the diagrams
+                        I drew and the code I wrote came from my past projects. In fact, we would regularly refer back
+                        to our past projects to bring in code snippets from them, be it API controller functions, state
+                        management functions, or database queries. I got to thinking: what if I didn't spend all that
+                        time outside of my classes to build my past projects?</p>
+                    <p class="py-2">Today I'm here to primarily tell you why it's so, so important to build many
+                        projects instead of just completing assignments for your course grades. That is not to say
+                        ignore your course assignments - fundamentals of programming and computer science are important,
+                        more on that later. But there is a reason why the best programs and applications were built by
+                        college dropouts.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Programming is a Craft</h2>
+                    <p class="py-2">One thing you should never forget is that programming languages are a tool and
+                        programming is a craft. Just as performing surgery or building a chair, programming is a craft
+                        to build software that solves problems or does something the user enjoys. No matter how enticing
+                        it gets to learn about processors
+                        and ALUs and memory management, if you can't build something from what you learn, it essentially
+                        just becomes no more than a puzzle game or math problem. This is why whenever you learn
+                        something, be it Python,
+                        Java, C, HTML, CSS, JavaScript, React, Node, PHP, Flask, or C#, you should try to build
+                        something. Or several things.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Design, build, test, optimize</h2>
+                    <p class="py-2">Engineering begins with an idea or goal. You take the idea, then you start designing
+                        the architecture for it. Then, you use the design to build it using whatever stack you choose.
+                        Then, you test, and if it breaks, you rectify. When everything is somewhat working, you
+                        optimize. You now have a fully functioning program or application.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Deployment</h2>
+                    <p class="py-2">You might think deployment is trivial. That is not the case. You want to see your
+                        project come to fruition. You might brush that aside, shrug it off, but you will feel different
+                        when your
+                        application is actually exposed to the world. This is an experience that should not be ignored.
+                        It helps you build confidence as a software developer and makes you feel accomplished, even if
+                        you didn't make a single penny out of your project. You will come across all sorts of new
+                        problems when you actually decide to deploy your software to the world.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Celebrate, Rinse and Repeat</h2>
+                    <p class="py-2">You've deployed your first precious application or program - Congratulations! But
+                        the journey
+                        is only beginning. This is the start of the road in an incredible journey. Like I said before,
+                        programming is a craft,
+                        but it's an incredibly powerful craft
+                        that can influence millions of people around the world, given the right idea, design, and build.
+                        You've grown as much as the project you just deployed. Now, it's time to think about the next
+                        idea, design it, build it, test it, optimize it, and release it. Or, it's time for you to add
+                        more features to your current project.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">D-Day</h2>
+                    <p class="py-2">There will come a time when you come across an incredible idea. I like to call it
+                        D-day. It may or may not come from you. It may come from a CEO of a startup. It may come from a
+                        friend or family or coworker. At this moment, you have to do your due diligence before
+                        jumping into building - are there existing designs for the application? Remember, you are a
+                        developer, not a designer. No matter how confident you are with design, there will be others who
+                        are more talented than you. If you think your design is better, go with it. Otherwise, ask for
+                        something. Then, check what the source has been doing so far regarding the product - have they
+                        begun marketing? Is there presence for it? Is the structure for success established? If none of
+                        those apply, you have to do the work yourself.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Time to Build</h2>
+                    <p class="py-2">After you've established that there is a potential for great success from delivering
+                        something significant to users, the time will come to build. And this is the time you will
+                        realize all the apps and programs you've built so far will be your ally. Every second you spent
+                        designing, building, fixing, and optimizing, will come into play. Of course, you will run into
+                        blocks. But that's when your education will kick in - the more you understand the fundamentals
+                        of programming and computer science, the faster you will find your answer. Your experience
+                        building applications and your education will work in tandem. They will assist you in equal
+                        amounts, be it consciously or not. If you did not spend time building things from what you
+                        learned, it will take you that much longer to figure out a solution. But if you can remember
+                        running into a similar issue from a past project of yours, you are that much faster, and that
+                        much more valuable.</p>
+                    <p class="py-2">Build projects. Set time aside. The best chair builder didn't become the best
+                        hand-crafted chair
+                        builder by getting perfect scores in class. They built many, many chairs, and
+                        optimized over and over again by learning from their past chairs. By the way, the most expensive
+                        chair in the world costs $30 million dollars.</p>
+                    <p class="py-2">Let's make the world a better place.</p>
+
+                </article>
+            </div>
+        </main>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
+                    <ul>
+                        <li>T: +1 (778) 994-4939</li>
+                        <li>E: spkim0921@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
+                    <ul>
+                        <li>North Vancouver, BC</li>
+                        <li>Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
