@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<!--
+    author: Paul Kim
+    date: October 5, 2022
+    version: 1.0
+    notes: Capytech articles page
+-->
+
+<head>
+    <title>Paul Kim | Articles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../script/jquery-3.7.0.min.js" defer="defer"></script>
+    <script src="../../script/menu.js" defer="defer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../script/mouse-effect.js" defer></script>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="flex flex-col min-h-screen mx-auto px-1 bg-slate-800 text-white">
+        <div id='speedcapture'>
+            <div class='ghost face'>
+                <div class='arms'>
+                    <div class='arm'></div>
+                    <div class='arm'></div>
+                </div>
+                <div class='inner'>
+                    <div class='mouth'></div>
+                </div>
+            </div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+            <div class='ghost'></div>
+        </div>
+        <header class="md:flex bg-slate-800 px-2 py-2 sticky top-0 z-50">
+            <div class="flex justify-between">
+                <a href="../../index.html"><img src="../../html/image/capyness.png" alt="Capytech Icon"
+                        class="max-w-10"></a>
+                <button id="hamburger-menu" class="text-3xl md:hidden">&#127828;</button>
+            </div>
+            <nav id="main-nav">
+                <ul class="md:flex">
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/index.html">Home</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/portfolio/index.html">Portfolio</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/articles/index.html">Articles</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/about/index.html">About</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/resume/index.html">Resume</a>
+                    </li>
+                    <li
+                        class="px-5 py-3 text-center  md:block rounded-md transition ease-in-out duration-300 hover:bg-slate-500">
+                        <a href="../../html/contact/index.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex-1">
+            <div class=" py-2 max-w-[800px] mx-auto">
+                <article>
+                    <h2 class="text-4xl text-center py-10">AI, LLMs, Coding, and Software Development</h2>
+                    <img src="../image/ai.webp" alt="Some robot doing something" class="scrum-img mx-auto">
+                    <p class="py-2 text-teal-300">Posted on: March 13, 2025</p>
+                    <p class="py-5">Yet Another Article About AI (YAAAI). This is what this is. But not really.
+                    </p>
+                    <p>There are six well-known levels of "programming languages", so to speak, in computer
+                        architecture. The lowest, level 0, is digital logic level, where you deal with logic gates and
+                        bits. Then, you have microarchitecture level where you write commands for the CPU so it
+                        manipulates memory and the ALU (PCout, MARin, READ, clear Y, set Cin, ADD, Zin etc). You also
+                        have ISA, OS, and assembly above it. Finally, you have the problem-oriented level where every
+                        programming language you can think of resides (Python, Java, C, C++, C#, Go, Rust,
+                        JavaScript, Gleam...). And then you have level 6. This is where I would put "prompt engineering"
+                        for
+                        software development.</p>
+                    <p class="py-5">Now here's the first issue: LLM prompts are just plain english. LLMs just take any
+                        kind of text content (or nowadays image and video as well) input without any binding structure
+                        or rules that need to be followed
+                        and tries to understand it and
+                        produce an output. And that's why it's great! Great for the general public, great for general
+                        purpose. Not great for software development.
+                    </p>
+                    <h2 class="text-xl pt-2 text-teal-300">Introducing AI agents</h2>
+                    <p class="">AI agents are given context. This context is written in a very specific way (You are a
+                        highly skilled software developer...) and is prompted, or "engineered" in a way that the LLM
+                        will behave in a
+                        more desired way, for example, more like a software developer. It will (hopefully) produce
+                        better
+                        quality code than a simple "Make me a 2D platform adventure game in python" ChatGPT prompt. But
+                        is
+                        it good enough, as in good enough to build actual deployable apps and not prototypes? Good
+                        enough to
+                        replace software developers? At the time of writing with Claude Sonnet 3.7 deep think mode...
+                    </p>
+                    <p>No.</p>
+                    <p class="py-2"></p>
+                    <h2 class="text-xl pt-2 text-teal-300">Structure, or The Lack Thereof</h2>
+                    <p class="py-2">Every programming language has rigid syntax rules that must be adhered to, or the
+                        compiler or interpreter will reject your instructions. When we're attempting to use LLMs to
+                        produce code, we are literally attempting to use them as compilers from level 6 to level 5 or
+                        lower. Neural nets take input, process the input, and produce output. The input currently has no
+                        defined structure, and even with attempts at adding structure to AI agents, the english language
+                        is
+                        too vague. The "compiler" now has to deal with structureless input and somehow compile and
+                        output it into
+                        working level 5 code. This is a problem.</p>
+                    <h2 class="text-xl pt-2 text-teal-300">Levels of Abstraction</h2>
+                    <p class="py-2">We are now hitting the wall of attempting to abstract level 5 code even further. And
+                        here is my argument: plain english is simply too high of an abstraction to be considered level
+                        6. My imagination of what a level 6 language that the AI compiler could compile and produce
+                        working code output would look like something like this:</p>
+                    <div class="bg-gray-900 p-2">
+                        <code class="py-2">
+                        1. <span class="text-blue-500">MODE</span> = development <span class="text-green-400">// tells the LLM to switch mode from general-purpose to specifically
+                        development</span> <br>
+                        2. <span class="text-blue-500">COMMAND</span> = build <span class="text-green-400">// tells the LLM that it will need to build a program. Other modes could
+                        include DEBUG, TEST and DEPLOY</span> <br>
+                        3. <span class="text-blue-500">STACK</span> = React, Hono, PostgreSQL <span class="text-green-400">// tells the LLM what stack to use</span> <br>
+                        4. <span class="text-blue-500">OBJECTIVE</span> = game <span class="text-green-400">// this can be replaced by "website" or "tool" or a variety of objectives
+                        for the program. This parameter is sensitive and has the risk of becoming too vague unless the
+                        objective of the program input is crystal clear to the AI compiler.</span> <br>
+                        5. <span class="text-blue-500">FRONTEND_DETAILS</span> = 2D, single-player, user controls main character, controls = [move, left,
+                        right, jump,
+                        double-jump, attack, dash, special attack], ui = [health bar, stamina, character level,
+                        inventory, stage level, boss health bar], enemies = [mob1,
+                        mob2,
+                        mob3, mob4, mob5, boss1, boss2, boss3, boss4, boss5], checkpoints <span class="text-green-400">// again, can be extremely
+                        sensitive
+                        and complicated, ideally can provide the AI compiler design frames from something like Figma</span>
+                        <br>
+                        6. <span class="text-blue-500">BACKEND_DETAILS</span> = users, save progress, load progress <span class="text-green-400">// anything beyond CRUD operations will
+                        become sensitive to input into the AI compiler</span>
+                    </code>
+                    </div>
+                    <p class="py-2">Steps 4 and beyond are where the input must be carefully crafted for the AI compiler
+                        to compile correctly and output working code. In fact, we should allow the AI compiler to
+                        provide feedback such as syntax errors or logic errors at this stage. This is a level 6 language
+                        because it no longer deals with data types and data structures (as much as possible, since we
+                        still seem to need to
+                        use something that looks like an array). There are no functions to be
+                        defined or classes to be
+                        declared explicitly. And obviously no memory management, no pointers. Like any compiler, the AI
+                        compiler will
+                        need to provide feedback or
+                        clarifications
+                        regarding potential gaps in information or error-causing inputs. If all of these are achieved,
+                        we now have a level 6 language that uses AI as its compiler. But is this what people want?
+                        Perhaps not. Because this still feels like coding. And people don't want to code or engineer,
+                        for some reason. But they still want something that's engineered. ¯\_(ツ)_/¯
+                    </p>
+                </article>
+            </div>
+        </main>
+        <footer class="mx-auto text-center">
+            <div class="md:flex">
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Contact</h2>
+                    <ul>
+                        <li>T: +1 (778) 994-4939</li>
+                        <li>E: spkim0921@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="py-2 md:px-5">
+                    <h2 class="text-xl text-teal-300">Location</h2>
+                    <ul>
+                        <li>North Vancouver, BC</li>
+                        <li>Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="py-2">Copyright&copy; 2022 Capytech. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
